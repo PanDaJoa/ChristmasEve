@@ -95,4 +95,4 @@ public class Child : MonoBehaviour
 }
 
 
-//github연동 확인용
+//연동확인용_24.01.31/18:46-고승연
