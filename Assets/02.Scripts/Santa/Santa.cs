@@ -14,11 +14,16 @@ public class Santa : MonoBehaviour
     }
     void Update()
     {
+        
        if (SantaHealth <= 0) 
-        {
+       {
             gameObject.SetActive(false);
-            SantaDeathPrefab.transform.position = this.transform.position;
+            Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
+            
+
         }
+       
+       
     }
 
 }
