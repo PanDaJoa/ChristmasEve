@@ -13,11 +13,12 @@ public enum ChildType
 public class Child : MonoBehaviour
 {
 
-
+    private bool isSantaPresent = false; // Santa가 있는지 여부를 저장하는 변수 추가
 
     public int ChildHealth = 15;                                 
     public int AttackDamage = 1;
-    public float MovementSpeed = 0.04f;
+    public float MovementSpeed = 0.4f;
+    private float OriginalSpeed = 0.4f; // OriginalSpeed 지정
 
     public const float AttackInterval = 0.2f;           //공격딜레이
     public float AttackTimer = 0;                           //
@@ -45,6 +46,11 @@ public class Child : MonoBehaviour
         {
             Death();
         }
+        // Santa가 없을 때 MovementSpeed를 복구
+        if (!isSantaPresent)
+        {
+            MovementSpeed = OriginalSpeed; //  MovementSpeed를 OriginalSpeed로 복구
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -65,6 +71,7 @@ public class Child : MonoBehaviour
             Basic_Santa santa = collision.GetComponent<Basic_Santa>();
             MovementSpeed = 0;
             santa.SantaHealth -= 1;
+            isSantaPresent = true; // Santa가 있음을 표시
         }
     }
 
@@ -86,6 +93,13 @@ public class Child : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Santa")
+        {
+            isSantaPresent = false; // Santa가 없음을 표시
+        }
+    }
 
     public void Death()
     {

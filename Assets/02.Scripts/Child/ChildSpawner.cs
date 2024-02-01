@@ -10,7 +10,7 @@ public class ChildSpawner : MonoBehaviour
     public GameObject Hammer_ChildPrefab;
     public GameObject Bomb_ChildPrefab;*/
 
-    public int PoolSize = 10;
+    public int PoolSize = 15;
     public List<Child> ChildPool;
 
     private void Awake()
