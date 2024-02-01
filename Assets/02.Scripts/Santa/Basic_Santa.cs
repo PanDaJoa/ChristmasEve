@@ -6,6 +6,7 @@ using UnityEngine;
 public class Basic_Santa : MonoBehaviour
 {
     public int SantaHealth = 10;
+    public GameObject SantaDeathPrefab;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Basic_Santa : MonoBehaviour
        if (SantaHealth <= 0) 
         {
             gameObject.SetActive(false);
+            SantaDeathPrefab.transform.position = this.transform.position;
         }
     }
 
