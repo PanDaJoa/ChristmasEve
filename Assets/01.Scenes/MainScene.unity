@@ -131,9 +131,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1697118520003706825, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
       propertyPath: m_Name
       value: Resource_Santa
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      propertyPath: m_TagString
+      value: Santa
       objectReference: {fileID: 0}
     - target: {fileID: 1896500728506254220, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -141,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1896500728506254220, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: 0.294
       objectReference: {fileID: 0}
     - target: {fileID: 1896500728506254220, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -175,14 +187,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8614568936437028722, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614568936437028722, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1074358247
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1896500728506254220, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982674192}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 529319855}
+    - targetCorrespondingSourceObject: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 529319858}
   m_SourcePrefab: {fileID: 100100000, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+--- !u!4 &529319853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1896500728506254220, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
+  m_PrefabInstance: {fileID: 529319852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &529319854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1870142124196257538, guid: 964c0029f7769a7489fb2a122885c5a3, type: 3}
@@ -200,8 +231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a2f394f7c4cd143bd345c5478c4ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTime: 0
-  CoinPrefab: {fileID: 7384722705898762811, guid: ee9b2204f815c614eae573915e9c4cd8, type: 3}
+--- !u!114 &529319858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529319854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SantaHealth: 10
+  SantaDeathPrefab: {fileID: 9092701907691083904, guid: 9d721f5af70fd4143b03bd69ec9b2dad, type: 3}
 --- !u!1 &790396988
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +296,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &982674191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982674192}
+  - component: {fileID: 982674193}
+  m_Layer: 0
+  m_Name: CoinSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982674192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982674191}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07, y: -0.54, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 529319853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982674193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982674191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27e75d82a5251743aff81f5992e3335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinPrefab: {fileID: 7384722705898762811, guid: ee9b2204f815c614eae573915e9c4cd8, type: 3}
+  CurrentTime: 0
+  PoolSize: 10
+  CoinPool: []
 --- !u!1 &1390818580
 GameObject:
   m_ObjectHideFlags: 0
