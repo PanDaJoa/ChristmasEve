@@ -5,8 +5,8 @@ using UnityEngine;
 
 public enum SantaType
 {
-    Bow,
-    Gun,
+    Bow,                
+    Gun,                
     Bomb,
     Sword,
     Present
