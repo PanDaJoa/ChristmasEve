@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8212938369803014101}
   - component: {fileID: 2243773714090344869}
-  - component: {fileID: 3482339254716958370}
   - component: {fileID: 2055973465161533732}
   - component: {fileID: 1504277580821047509}
+  - component: {fileID: 3517792223216722504}
   m_Layer: 7
   m_Name: Basic_Child
   m_TagString: Child
@@ -174,25 +174,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3482339254716958370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106986326011112635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c104d6e8e0fea245a9bcdfdfd0d8f6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChildDeathPrefab: {fileID: 6803791312930240358, guid: 2c08bfe1811c55e49b4a5f90d418c009, type: 3}
-  ChildHealth: 15
-  AttackDamage: 1
-  MovementSpeed: 0.4
-  AttackTimer: 0
-  AttackAutoMode: 0
-  CType: 0
 --- !u!50 &2055973465161533732
 Rigidbody2D:
   serializedVersion: 4
@@ -265,6 +246,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.025818, y: 1.9443724}
   m_EdgeRadius: 0
+--- !u!114 &3517792223216722504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106986326011112635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9286198fc572348a79c0e321371e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChildDeathPrefab: {fileID: 6803791312930240358, guid: 2c08bfe1811c55e49b4a5f90d418c009, type: 3}
+  ChildHealth: 15
+  AttackDamage: 1
+  MovementSpeed: 0.4
+  AttackTimer: 0
+  AttackAutoMode: 0
+  CType: 0
 --- !u!1 &4502873542415845731
 GameObject:
   m_ObjectHideFlags: 0
