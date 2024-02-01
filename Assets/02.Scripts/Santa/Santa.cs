@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Basic_Santa : MonoBehaviour
+public class Santa : MonoBehaviour
 {
     public int SantaHealth = 10;
     public GameObject SantaDeathPrefab;
