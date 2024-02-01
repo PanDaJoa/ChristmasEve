@@ -99,6 +99,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298296601349018220}
   m_Enabled: 1
+<<<<<<< HEAD:Assets/03.Prefabs/Santa/Sword_Santa.prefab
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 54f13b2dd37242b58b46710ac6a3186b, type: 2}
   m_CullingMode: 0
@@ -112,6 +113,47 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &6686948335539622880
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c104d6e8e0fea245a9bcdfdfd0d8f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChildDeathPrefab: {fileID: 6803791312930240358, guid: 2c08bfe1811c55e49b4a5f90d418c009, type: 3}
+  ChildHealth: 15
+  AttackDamage: 1
+  MovementSpeed: 0.4
+  AttackTimer: 0
+  AttackAutoMode: 0
+  CType: 0
+--- !u!50 &2055973465161533732
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106986326011112635}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &1504277580821047509
+>>>>>>> d56dfbcbcb2b7b58e664b66bafb93ef2a45604ad:Assets/03.Prefabs/Basic_Child.prefab
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class SantaDeath : MonoBehaviour
 {
-    public float timer = 2f;
-    public float destroyTime = 0f;
+    
     void Start()
     {
         Destroy(gameObject, 1.5f);
-
     }
 
         // Update is called once per frame
