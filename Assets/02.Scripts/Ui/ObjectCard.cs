@@ -9,8 +9,10 @@ public class ObjectCard : MonoBehaviour
     // 카드를 클릭하면
     public void OnClickCard()
     {
-        Debug.Log("Hello");
+        Debug.Log("유닛소환");
 
         GameObject.Instantiate(Object_Plant_Drag);
     }
+
+
 }
