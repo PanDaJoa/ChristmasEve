@@ -10,8 +10,9 @@ public class SantaFire : MonoBehaviour
     [Header("총구")]
     public GameObject Bow;
 
+    [Header("발사 속도")]
     public float Timer = 0;
-    public const float COOL_TIME = 0.8f;
+    public float COOL_TIME = 0.8f;
 
     public bool AutoMode = true;
 
@@ -42,6 +43,7 @@ public class SantaFire : MonoBehaviour
         bool ready = AutoMode;
         if (Timer <= 0 && ready)
         {
+            Timer = COOL_TIME;
             Fire();
         }
     }
@@ -57,7 +59,7 @@ public class SantaFire : MonoBehaviour
                 break; 
             }
         }
-            Timer = COOL_TIME;
+            
             GameObject Arrow = Instantiate(ArrowPrefab);
             Arrow.transform.position = Bow.transform.position;
         }

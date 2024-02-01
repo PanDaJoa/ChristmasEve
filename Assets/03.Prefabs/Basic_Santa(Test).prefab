@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6044545401715717152}
   - component: {fileID: 2341133732603441909}
   m_Layer: 6
-  m_Name: Basic_Santa
+  m_Name: Basic_Santa(Test)
   m_TagString: Santa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
