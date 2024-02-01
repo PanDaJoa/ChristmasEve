@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Basic_Santa : MonoBehaviour
+public class Santa : MonoBehaviour
 {
     public int SantaHealth = 10;
+    public GameObject SantaDeathPrefab;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class Basic_Santa : MonoBehaviour
     {
        if (SantaHealth <= 0) 
         {
-        Destroy(gameObject);
+            gameObject.SetActive(false);
+            SantaDeathPrefab.transform.position = this.transform.position;
         }
     }
 

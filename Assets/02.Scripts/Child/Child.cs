@@ -53,26 +53,25 @@ public class Child : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.tag == "Arrow")
-        {
-            Attack arrow = collision.collider.GetComponent<Attack>();
-            ChildHealth-=1;
-            Debug.Log(ChildHealth);
-        }
-        Destroy(collision.collider.gameObject);
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag=="Santa")
         {
-            Basic_Santa santa = collision.GetComponent<Basic_Santa>();
+            Santa santa = collision.GetComponent<Santa>();
             MovementSpeed = 0;
             santa.SantaHealth -= 1;
             isSantaPresent = true; // Santa가 있음을 표시
         }
+       else if (collision.tag == "Arrow")
+       {
+            Attack arrow = collision.GetComponent<Attack>();
+            ChildHealth -= 1;
+            Debug.Log(ChildHealth);
+            arrow.gameObject.SetActive(false);
+       }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -80,7 +79,7 @@ public class Child : MonoBehaviour
         AttackTimer -= Time.deltaTime;
         if (collision.tag == "Santa")
         {
-            Basic_Santa santa = collision.GetComponent<Basic_Santa>();
+            Santa santa = collision.GetComponent<Santa>();
             for (int i = 0; i < santa.SantaHealth; i++) 
             {
                 if(AttackTimer <= 0f)
