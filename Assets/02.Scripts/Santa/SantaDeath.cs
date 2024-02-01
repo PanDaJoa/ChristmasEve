@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SantaDeath : MonoBehaviour
 {
-    private bool _isTimerStarted = false;
-
-    public float _timer = 2f;
-    public float DestryTime = 0f;
+    public float Timer = 2f;
+    public float DestroyTime = 0f;
     void Start()
     {
         
@@ -17,22 +15,17 @@ public class SantaDeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Santa santa = GetComponent<Santa>();
+        Santa santa = GetComponentInParent<Santa>();
 
-        if (santa.SantaHealth <= 0)
+        if (santa != null && santa.SantaHealth <= 0)
         {
-            _isTimerStarted = true;
-            if (_isTimerStarted)
+            Timer -= Time.deltaTime;
+            if (Timer <= DestroyTime)
             {
-                _timer -= Time.deltaTime;
-                if (_timer <= DestryTime)
-                {
-                    Destroy(this.gameObject);
-
-                }
+                Destroy(gameObject);
             }
-            
+
         }
-        
+
     }
 }
