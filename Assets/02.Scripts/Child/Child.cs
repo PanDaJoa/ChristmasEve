@@ -96,7 +96,7 @@ public class Child : MonoBehaviour
     {
         if (collision.tag == "Santa")
         {
-            isSantaPresent = false; // Santa가 없음을 표시
+            isSantaPresent = false; // Santa가 없음을 표시.  -> 산타랑 싸움 끝남
         }
     }
 
