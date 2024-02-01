@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4558612296664789896}
   - component: {fileID: 8843257420170482427}
   m_Layer: 6
-  m_Name: BowSanta
+  m_Name: Bow_Santa
   m_TagString: Santa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
