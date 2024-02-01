@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 3471274315951672025}
   - component: {fileID: 8999476827370849359}
   - component: {fileID: 1170818353031921546}
+  - component: {fileID: -698941725574272620}
   m_Layer: 6
   m_Name: Resource_Santa
   m_TagString: Santa
@@ -171,6 +172,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SantaHealth: 10
   SantaDeathPrefab: {fileID: 0}
+--- !u!61 &-698941725574272620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263725394550461904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16722322, y: -0.37931192}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.6, y: 3}
+    newSize: {x: 3.6, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6830468, y: 1.8171995}
+  m_EdgeRadius: 0
 --- !u!1 &7225655115075531056
 GameObject:
   m_ObjectHideFlags: 0

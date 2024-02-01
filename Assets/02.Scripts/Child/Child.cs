@@ -62,6 +62,7 @@ public class Child : MonoBehaviour
             Santa santa = collision.GetComponent<Santa>();
             MovementSpeed = 0;
             santa.SantaHealth -= 1;
+            Debug.Log(ChildHealth);
             isSantaPresent = true; // Santa가 있음을 표시
         }
        else if (collision.tag == "Arrow")
