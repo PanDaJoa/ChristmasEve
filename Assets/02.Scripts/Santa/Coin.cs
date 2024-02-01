@@ -11,11 +11,6 @@ public class Coin : MonoBehaviour
     // 코인 저장 -> 민성오빠
 
 
-    
-  
-
-   
-
     void Start()
     {
 

@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum SantaType
+{
+    Bow,
+    Gun,
+    Bomb,
+    Sword,
+    Present
+}
+
 public class Santa : MonoBehaviour
 {
     public int SantaHealth = 10;
     public GameObject SantaDeathPrefab;
-
-    
-    
 
     void Start()
     {
@@ -17,7 +23,6 @@ public class Santa : MonoBehaviour
     }
     void Update()
     {
- 
             if (SantaHealth <= 0)
             {
                 gameObject.SetActive(false);
