@@ -15,7 +15,7 @@ public class Basic_Santa : MonoBehaviour
     {
        if (SantaHealth <= 0) 
         {
-        Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
