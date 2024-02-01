@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SantaHealth: 10
-  SantaDeathPrefab: {fileID: 0}
+  SantaDeathPrefab: {fileID: 8932783373868597431, guid: 1007e76b0311b894d947f0f43250aa77, type: 3}
 --- !u!61 &-698941725574272620
 BoxCollider2D:
   m_ObjectHideFlags: 0
