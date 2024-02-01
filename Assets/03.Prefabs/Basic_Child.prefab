@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c104d6e8e0fea245a9bcdfdfd0d8f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChildDeathPrefab: {fileID: 6803791312930240358, guid: 2c08bfe1811c55e49b4a5f90d418c009, type: 3}
   ChildHealth: 15
   AttackDamage: 1
   MovementSpeed: 0.4

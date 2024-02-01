@@ -12,7 +12,7 @@ public enum ChildType
 
 public class Child : MonoBehaviour
 {
-
+    public GameObject ChildDeathPrefab;
     private bool isSantaPresent = false; // Santa가 있는지 여부를 저장하는 변수 추가
 
     public int ChildHealth = 15;                                 
@@ -44,7 +44,9 @@ public class Child : MonoBehaviour
         
         if(ChildHealth <= 0)
         {
-            Death();
+            //Death();
+            gameObject.SetActive(false);
+            Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
         }
         // Santa가 없을 때 MovementSpeed를 복구
         if (!isSantaPresent)
@@ -100,10 +102,11 @@ public class Child : MonoBehaviour
         }
     }
 
-    public void Death()
+    /*public void Death()
     {
         gameObject.SetActive(false);
-    }
+        Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
+    }*/
 
 }
 
