@@ -8,6 +8,7 @@ TagManager:
   - Child
   - Arrow
   - Container
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Child
   - Spawner
   - Arrow
-  - 
+  - Coin
   - 
   - 
   - 
@@ -56,4 +57,10 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3961206181
+    locked: 0
+  - name: Santa
+    uniqueID: 3220609049
+    locked: 0
+  - name: Coin
+    uniqueID: 3965733451
     locked: 0
