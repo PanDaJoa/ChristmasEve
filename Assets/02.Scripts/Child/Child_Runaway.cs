@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Child_Runaway : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float MovementSpeed = 0.8f;
     void Start()
     {
         
@@ -13,6 +13,8 @@ public class Child_Runaway : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 dir = Vector2.right;
+        transform.position += (Vector3)(dir * MovementSpeed) * Time.deltaTime;
+        dir = dir.normalized;
     }
 }

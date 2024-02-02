@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 8089537755829664945}
   - component: {fileID: 4956484688137738449}
   - component: {fileID: 6759057618838332395}
-  - component: {fileID: 6975736536314760691}
+  - component: {fileID: 8346651541962180436}
   m_Layer: 7
   m_Name: Bomb_Child
   m_TagString: Child
@@ -396,7 +396,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.110243, y: 2.159624}
   m_EdgeRadius: 0
---- !u!114 &6975736536314760691
+--- !u!114 &8346651541962180436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,16 +405,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6186770431689370585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9286198fc572348a79c0e321371e5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d00d396704b2e94391f56671fcd0e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChildDeathPrefab: {fileID: 6273021182682840411, guid: 4682ae5580b2a70429c8eaca8b41e3c0, type: 3}
-  CType: 3
-  ChildHealth: 15
-  AttackDamage: 1
+  ChildRunawayPrefab: {fileID: 1663224475506815309, guid: 9d7db54eac45cf848a826ab57c924ea7, type: 3}
+  BoomPrefab: {fileID: 0}
+  ChildHealth: 5
   MovementSpeed: 0.4
-  AttackTimer: 0
-  AttackAutoMode: 0
 --- !u!1 &7185688650599366153
 GameObject:
   m_ObjectHideFlags: 0
