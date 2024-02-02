@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -77,16 +78,17 @@ public class Container : MonoBehaviour
            // 드래그된 유닛을 제거
            Destroy(_dragDown.gameObject);
 
+           
 
            // 유닛을 타일의 위치에 생성
-           Instantiate(unitdown, this.transform.position, Quaternion.identity);
+           Instantiate(unitdown, this.transform.position, transform.rotation);
 
             // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
         }
-
+        
     }
-    
+
 }
 
 
