@@ -9,6 +9,7 @@ TagManager:
   - Arrow
   - Container
   - Coin
+  - Present
   layers:
   - Default
   - TransparentFX
