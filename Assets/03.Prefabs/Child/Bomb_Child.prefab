@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d00d396704b2e94391f56671fcd0e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Btype: 0
   ChildDeathPrefab: {fileID: 6273021182682840411, guid: 4682ae5580b2a70429c8eaca8b41e3c0, type: 3}
   ChildRunawayPrefab: {fileID: 1663224475506815309, guid: 9d7db54eac45cf848a826ab57c924ea7, type: 3}
   BoomPrefab: {fileID: 2271777428800238443, guid: e54cee9426b65c24498964fc971d74c0, type: 3}

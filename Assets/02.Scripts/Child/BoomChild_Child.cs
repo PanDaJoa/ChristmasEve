@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BoomChildType
+{
+    Boom
+}
+
 public class BoomChild_Child : MonoBehaviour
 {
+    public BoomChildType BType;
+
     public GameObject ChildDeathPrefab;
 
     public GameObject ChildRunawayPrefab;
@@ -13,6 +20,10 @@ public class BoomChild_Child : MonoBehaviour
     public int ChildHealth = 5;
 
     public float MovementSpeed = 0.4f;
+    public void Init()
+    {
+        ChildHealth = 5;
+    }
     void Start()
     {
         

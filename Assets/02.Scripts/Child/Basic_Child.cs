@@ -7,7 +7,7 @@ public enum ChildType
     Basic,
     Sword,
     Hammer,
-    Bomb
+    
 }
 public class Basic_Child : MonoBehaviour
 {
@@ -26,8 +26,13 @@ public class Basic_Child : MonoBehaviour
     public float AttackTimer = 0;
 
     public bool AttackAutoMode = false;
+    public void Init()
+    {
 
-    
+        ChildHealth = 15;
+        AttackTimer = AttackInterval;
+    }
+
 
     void Start()
     {
@@ -118,9 +123,10 @@ public class Basic_Child : MonoBehaviour
 
     private void Death()
     {
-        gameObject.SetActive(false);
+        
         Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
         gameObject.SetActive(false);
+        
     }
 
     
