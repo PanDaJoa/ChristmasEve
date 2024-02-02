@@ -28,6 +28,7 @@ public class Santa : MonoBehaviour
                 gameObject.SetActive(false);
                 Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
             }
+
         }
     
 }
