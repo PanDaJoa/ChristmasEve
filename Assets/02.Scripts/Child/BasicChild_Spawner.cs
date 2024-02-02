@@ -8,9 +8,20 @@ public class BasicChild_Spawner : MonoBehaviour
 
     public float MinSpawnInterval = 4f;
     public float MaxSpawnInterval = 8f;
-    private float SpawnTimer = 0f;
-    private float SpawnInterval = 0f;
+    public float SpawnTimer = 0f;
+    public float SpawnInterval = 0f;
 
+    /*public int PoolSize = 15;
+    public List<Basic_Child> ChildPool;
+
+    private void Awake()
+    {
+        ChildPool = new List<Basic_Child>();
+        for (int i = 0; i < PoolSize; i++)
+        {
+            GameObject basicChild = Instantiate(ChildPrefab);
+        }
+    }*/
     void Start()
     {
         SetRandomSpawnInterval();
