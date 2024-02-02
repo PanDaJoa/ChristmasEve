@@ -2,9 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ChildType
+{
+    Basic,
+    Sword,
+    Hammer,
+    Bomb
+}
 public class Basic_Child : MonoBehaviour
 {
     public GameObject ChildDeathPrefab;
+
+    public ChildType CType;
+
     private bool isSantaPresent = false;
 
     public int ChildHealth = 15;
@@ -89,6 +99,6 @@ public class Basic_Child : MonoBehaviour
     {
         gameObject.SetActive(false);
         Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
