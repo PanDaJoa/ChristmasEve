@@ -33,7 +33,7 @@ public class BasicChild_Spawner : MonoBehaviour
         SpawnTimer -= Time.deltaTime;
         if (SpawnTimer <= 0f)
         {
-            Basic_Child
+            //Basic_Child
             SpawnChild();
             SetRandomSpawnInterval();
             SpawnTimer = SpawnInterval;
