@@ -7,6 +7,7 @@ public class BasicChild_Spawner : MonoBehaviour
     public GameObject Basic_ChildPrefab;
     public GameObject Sword_ChildPrefab;
     public GameObject Hammer_ChildPrefab;
+    public GameObject Boom_ChildPrefab;
 
     public float MinSpawnInterval = 4f;
     public float MaxSpawnInterval = 8f;

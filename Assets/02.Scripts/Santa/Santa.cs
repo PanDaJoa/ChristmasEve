@@ -60,5 +60,41 @@ public class Santa : MonoBehaviour
        
     }
 
- }
+}
 
+
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BoomSanta : MonoBehaviour
+{
+    public GameObject BombPrefab;
+
+
+    void Start()
+    {
+        Santa santa = GetComponent<Santa>();
+    }
+    void Update()
+    {
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Basic_Child child = collision.GetComponent<Basic_Child>();
+        if (collision.tag == "Child")
+        {
+            if ()
+                Explosion();
+        }
+    }
+
+    void Explosion()
+    {
+        gameObject.SetActive(false);
+        Instantiate(BombPrefab, transform.position, transform.rotation);
+        gameObject.SetActive(false);
+    }
+}
+*/
