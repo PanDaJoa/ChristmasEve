@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Pool;
 using UnityEngine.Rendering;
 
 public class ObjectDragDown : MonoBehaviour
 {
     public bool _batched = false;
 
-    public GameObject unitPrefab;
-
     
+
     // 오브젝트의 SpriteRenderer 컴포넌트
     private SpriteRenderer _spriteRenderer;
-
-    // 오브젝트의 Collider2D 컴포넌트
-    private Collider2D _collider;  
-
 
     private void Start()
     {
@@ -37,9 +33,7 @@ public class ObjectDragDown : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             this.transform.position = mousePosition;
 
-
-        
-
         }
+        
     }
 }
