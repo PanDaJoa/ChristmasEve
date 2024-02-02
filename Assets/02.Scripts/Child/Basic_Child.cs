@@ -100,7 +100,7 @@ public class Basic_Child : MonoBehaviour
                 {
                     AttackTimer = AttackInterval;
                     santa.SantaHealth -= 1;
-                    Debug.Log($"산타:{santa.SantaHealth}");
+                    Debug.Log($"산타체력:{santa.SantaHealth}");
                 }
             }
         }
