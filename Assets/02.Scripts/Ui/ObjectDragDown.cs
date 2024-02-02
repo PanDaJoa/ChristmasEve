@@ -9,16 +9,21 @@ public class ObjectDragDown : MonoBehaviour
     public bool _batched = false;
 
     public GameObject unitPrefab;
-    
 
+    
     // 오브젝트의 SpriteRenderer 컴포넌트
     private SpriteRenderer _spriteRenderer;
-    
+
+    // 오브젝트의 Collider2D 컴포넌트
+    private Collider2D _collider;  
+
 
     private void Start()
     {
         // SpriteRenderer 컴포넌트를 가져옵니다.
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
+ 
 
     }
     private void Update()
@@ -33,18 +38,7 @@ public class ObjectDragDown : MonoBehaviour
             this.transform.position = mousePosition;
 
 
-            // 2. 만약에 마우스 커서를 한번 더 누르면
-            if (Input.GetMouseButtonUp(0))
-            {
-                // 3. 배치가된다.
-                _batched = true;
-
-                // 오브젝트의 렌더링 순서를 변경합니다.
-                _spriteRenderer.sortingLayerName = "Unit";
-
-                // 컨테이너 콜라이더 내에 유닛 오브젝트를 생성합니다.
-                Instantiate(unitPrefab, mousePosition, Quaternion.identity);
-            }
+        
 
         }
     }
