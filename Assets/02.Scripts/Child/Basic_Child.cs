@@ -12,7 +12,6 @@ public enum ChildType
 public class Basic_Child : MonoBehaviour
 {
     public GameObject ChildDeathPrefab;
-    private GameObject childDeathPrefabInstance;
 
     public ChildType CType;
 
@@ -98,17 +97,8 @@ public class Basic_Child : MonoBehaviour
 
     private void Death()
     {
-        if (childDeathPrefabInstance == null)
-        {
-            childDeathPrefabInstance = Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
-            // 1.5초 후에 childDeathPrefabInstance를 파괴합니다
-            Destroy(childDeathPrefabInstance, 1.5f);
-        }
-
-        // ChildHealth가 0이 되면 gameObject를 비활성화합니다
         gameObject.SetActive(false);
-        //gameObject.SetActive(false);
-        //Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
-        //Destroy(gameObject);
+        Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
+        gameObject.SetActive(false);
     }
 }
