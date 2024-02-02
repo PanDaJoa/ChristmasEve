@@ -11,7 +11,7 @@ public class BasicChild_Spawner : MonoBehaviour
     public float SpawnTimer = 0f;
     public float SpawnInterval = 0f;
 
-    /*public int PoolSize = 15;
+    public int PoolSize = 20;
     public List<Basic_Child> ChildPool;
 
     private void Awake()
@@ -20,8 +20,10 @@ public class BasicChild_Spawner : MonoBehaviour
         for (int i = 0; i < PoolSize; i++)
         {
             GameObject basicChild = Instantiate(ChildPrefab);
+            basicChild.SetActive(false);
+            ChildPool.Add(basicChild.GetComponent<Basic_Child>());
         }
-    }*/
+    }
     void Start()
     {
         SetRandomSpawnInterval();
@@ -31,6 +33,7 @@ public class BasicChild_Spawner : MonoBehaviour
         SpawnTimer -= Time.deltaTime;
         if (SpawnTimer <= 0f)
         {
+            Basic_Child
             SpawnChild();
             SetRandomSpawnInterval();
             SpawnTimer = SpawnInterval;
