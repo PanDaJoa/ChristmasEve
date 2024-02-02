@@ -16,6 +16,12 @@ public class Santa : MonoBehaviour
 {
     public SantaType SType;
     public int SantaHealth = 10;
+    public float AttackInterval = 1f;
+    public float AttackTimer = 0f;
+
+    public int AttackDamage;
+    
+
     public GameObject SantaDeathPrefab;
 
     void Start()
@@ -29,21 +35,30 @@ public class Santa : MonoBehaviour
                 gameObject.SetActive(false);
                 Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
             }
-        }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Child")
-        {
-            Basic_Child child = collision.GetComponent<Basic_Child>();
             if(SType == SantaType.Sword)
-            {
-                child.ChildHealth -= 3;
-            }/*else if(child.ChildHealth <= 0)
-            {
-                child.gameObject.SetActive(false);
-            }*/
+        {
+            AttackDamage = 3;
         }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        AttackTimer -= Time.deltaTime;
+        
+            if (collision.tag == "Child")
+            {
+                Basic_Child child = collision.GetComponent<Basic_Child>();
+                for(int i = 0; i< child.ChildHealth; i++) 
+                {
+                    if (AttackTimer <= 0f)
+                    {
+                        AttackTimer = AttackInterval;
+                        child.ChildHealth -= AttackDamage;
+                        Debug.Log($"어린이체력:{child.ChildHealth}");
+                    }
+                }    
+        }
+       
     }
 
-    }
+ }
 
