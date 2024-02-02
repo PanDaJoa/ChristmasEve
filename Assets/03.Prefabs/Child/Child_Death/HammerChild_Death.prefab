@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 888054709883486891}
   - component: {fileID: 8148182092811267708}
   - component: {fileID: 6051101765465994928}
+  - component: {fileID: -77901974577067677}
   m_Layer: 0
   m_Name: HammerChild_Death
   m_TagString: Untagged
@@ -107,6 +108,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-77901974577067677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200433486504609011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d7ebc5abaf5a548b8d63022a5fdbdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1067663912673234947
 GameObject:
   m_ObjectHideFlags: 0
