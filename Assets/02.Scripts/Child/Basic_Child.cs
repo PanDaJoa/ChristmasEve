@@ -27,7 +27,12 @@ public class Basic_Child : MonoBehaviour
 
     public bool AttackAutoMode = false;
 
-    
+    public void Init()
+    {
+        ChildHealth = 15;
+        AttackTimer = AttackInterval;
+    }
+
 
     void Start()
     {

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SType: 0
+  SType: 3
   SantaHealth: 20
   AttackInterval: 0.8
   AttackTimer: 0
