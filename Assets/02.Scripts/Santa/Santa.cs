@@ -25,6 +25,12 @@ public class Santa : MonoBehaviour
 
     public GameObject SantaDeathPrefab;
 
+    public void Init()
+    {
+        SantaHealth = 10;
+        AttackInterval = 1f;
+}
+
     void Start()
     {
 
