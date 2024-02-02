@@ -410,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChildDeathPrefab: {fileID: 6273021182682840411, guid: 4682ae5580b2a70429c8eaca8b41e3c0, type: 3}
   ChildRunawayPrefab: {fileID: 1663224475506815309, guid: 9d7db54eac45cf848a826ab57c924ea7, type: 3}
-  BoomPrefab: {fileID: 0}
+  BoomPrefab: {fileID: 2271777428800238443, guid: e54cee9426b65c24498964fc971d74c0, type: 3}
   ChildHealth: 5
   MovementSpeed: 0.4
 --- !u!1 &7185688650599366153
