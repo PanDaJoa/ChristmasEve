@@ -10,7 +10,6 @@ public class BasicChild_Death : MonoBehaviour
         
         Destroy(gameObject, 1.5f);
     }
-
     
     void Update()
     {
