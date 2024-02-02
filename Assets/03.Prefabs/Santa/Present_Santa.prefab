@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2917396624518597306}
   - component: {fileID: 4284129942980869238}
   - component: {fileID: 5992780275800780333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Present_Santa
-  m_TagString: Untagged
+  m_TagString: Santa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,5 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SType: 0
   SantaHealth: 20
+  AttackInterval: 0.8
+  AttackTimer: 0
+  AttackDamage: 0
   SantaDeathPrefab: {fileID: 0}
