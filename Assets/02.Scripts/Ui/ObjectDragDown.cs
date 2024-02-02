@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 
 public class ObjectDragDown : MonoBehaviour
 {
+    // 배치가 처음에 안되어 있어서 (false)
     public bool _batched = false;
 
     
