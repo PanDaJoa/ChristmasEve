@@ -22,7 +22,7 @@ public class Basic_Child : MonoBehaviour
     public float MovementSpeed = 0.4f;
     private float OriginalSpeed = 0.4f;
 
-    public const float AttackInterval = 0.2f;
+    public const float AttackInterval = 0.4f;
     public float AttackTimer = 0;
 
     public bool AttackAutoMode = false;
@@ -31,6 +31,7 @@ public class Basic_Child : MonoBehaviour
 
     void Start()
     {
+       
 
     }
 
@@ -49,6 +50,16 @@ public class Basic_Child : MonoBehaviour
         {
             MovementSpeed = OriginalSpeed;
         }
+        
+        if (CType == ChildType.Basic || CType == ChildType.Hammer)
+        {
+            AttackDamage = 1;
+        }
+        else if (CType == ChildType.Sword)
+        {
+            AttackDamage = 2;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -110,4 +121,6 @@ public class Basic_Child : MonoBehaviour
         Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
         gameObject.SetActive(false);
     }
+
+    
 }
