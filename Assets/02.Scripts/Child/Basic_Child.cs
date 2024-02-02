@@ -96,15 +96,13 @@ public class Basic_Child : MonoBehaviour
             MovementSpeed = 0;
             Santa santa = collision.GetComponent<Santa>();
             isSantaPresent = true;
-            for (int i = 0; i < santa.SantaHealth; i++)
+            if (AttackTimer <= 0f)
             {
-                if (AttackTimer <= 0f)
-                {
-                    AttackTimer = AttackInterval;
-                    santa.SantaHealth -= AttackDamage;
-                    Debug.Log($"산타체력:{santa.SantaHealth}");
-                }
+                AttackTimer = AttackInterval;
+                santa.SantaHealth -= AttackDamage;
+                Debug.Log($"산타체력:{santa.SantaHealth}");
             }
+            
         }
 
 
