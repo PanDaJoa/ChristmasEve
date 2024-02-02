@@ -12,6 +12,7 @@ public enum AttackType
 public class Attack : MonoBehaviour
 {
     public float Speed = 3f;
+    public AttackType AType;
 
     void Start()
     {
