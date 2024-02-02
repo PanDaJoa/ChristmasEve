@@ -64,15 +64,15 @@ public class Basic_Child : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Santa")
+        /*if (collision.tag == "Santa")
         {
             Santa santa = collision.GetComponent<Santa>();
             MovementSpeed = 0;
             santa.SantaHealth -= AttackDamage;
             isSantaPresent = true;
             Debug.Log($"트리거 엔터{santa.SantaHealth}");
-        }
-        else if (collision.tag == "Arrow")
+        }*/
+        if (collision.tag == "Arrow")
         {
             Attack arrow = collision.GetComponent<Attack>();
             if(arrow.AType == AttackType.Arrow)
@@ -93,13 +93,15 @@ public class Basic_Child : MonoBehaviour
         AttackTimer -= Time.deltaTime;
         if (collision.tag == "Santa")
         {
+            MovementSpeed = 0;
             Santa santa = collision.GetComponent<Santa>();
+            isSantaPresent = true;
             for (int i = 0; i < santa.SantaHealth; i++)
             {
                 if (AttackTimer <= 0f)
                 {
                     AttackTimer = AttackInterval;
-                    santa.SantaHealth -= 1;
+                    santa.SantaHealth -= AttackDamage;
                     Debug.Log($"산타체력:{santa.SantaHealth}");
                 }
             }
