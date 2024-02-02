@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014458338477856851, guid: 17d216f109ae37f48a1d4cf5457a4f43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: 9014458338477856851, guid: 17d216f109ae37f48a1d4cf5457a4f43, type: 3}
       propertyPath: m_LocalPosition.y
@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic_Child
       objectReference: {fileID: 0}
+    - target: {fileID: 8658776985372480580, guid: a611ad2916f572e49a282c00afd3f54f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -482,6 +486,10 @@ PrefabInstance:
     - target: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
       propertyPath: m_Name
       value: Hammer_Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7821237607886475436, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,7 +721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1972755140431378818, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.95
+      value: 5.68
       objectReference: {fileID: 0}
     - target: {fileID: 1972755140431378818, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -815,6 +823,10 @@ PrefabInstance:
     - target: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
       propertyPath: m_Name
       value: Bomb_Child
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
