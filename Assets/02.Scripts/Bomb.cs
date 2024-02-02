@@ -10,7 +10,6 @@ public class Bomb : MonoBehaviour
 
     void Start()
     {
-
         Destroy(gameObject, 1.5f);
     }
 
@@ -25,8 +24,10 @@ public class Bomb : MonoBehaviour
         {
             if (CurrentTime <= 0f)
             {
+                
                 Basic_Child child = collision.GetComponent<Basic_Child>();
                 child.ChildHealth -= 30;
+                CurrentTime = Timer;
             }
             
         }

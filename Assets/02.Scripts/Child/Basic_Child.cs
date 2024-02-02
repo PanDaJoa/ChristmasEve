@@ -88,7 +88,6 @@ public class Basic_Child : MonoBehaviour
             {
                 ChildHealth -= 2;
             }
-            Debug.Log(ChildHealth);
             arrow.gameObject.SetActive(false);
         }
     }

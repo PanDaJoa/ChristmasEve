@@ -55,7 +55,7 @@ public class BoomChild_Child : MonoBehaviour
             {
                 ChildHealth -= 2;
             }
-            Debug.Log(ChildHealth);
+         
             arrow.gameObject.SetActive(false);
         }
         else if(collision.tag == "Santa")
