@@ -33,15 +33,10 @@ public class Basic_Child : MonoBehaviour
         AttackTimer = AttackInterval;
     }
 
-<<<<<<< HEAD
-=======
-    public void Init()
-    {
-        ChildHealth = 15;
-        AttackTimer = AttackInterval;
-    }
 
->>>>>>> 9ae02aae5fc90e58861a2caceb56b36e924974c2
+   
+
+
 
     void Start()
     {
