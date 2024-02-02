@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _batched: 0
   unitPrefab: {fileID: 5463838715453862567}
-  containerCollider: {fileID: 0}
+  PoolSize: 100
 --- !u!61 &-2920061740036447332
 BoxCollider2D:
   m_ObjectHideFlags: 0
