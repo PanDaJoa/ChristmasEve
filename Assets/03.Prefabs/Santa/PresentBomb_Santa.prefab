@@ -98,8 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SType: 0
   SantaHealth: 20
-  SantaDeathPrefab: {fileID: 0}
+  AttackInterval: 0.8
+  AttackTimer: 0
+  AttackDamage: 0
+  SantaDeathPrefab: {fileID: 2271777428800238443, guid: 9b4343322b2027341a8d0210f1e9a385, type: 3}
 --- !u!61 &3292029283548584548
 BoxCollider2D:
   m_ObjectHideFlags: 0
