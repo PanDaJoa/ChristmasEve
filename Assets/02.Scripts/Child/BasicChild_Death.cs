@@ -7,7 +7,6 @@ public class BasicChild_Death : MonoBehaviour
     
     void Start()
     {
-        
         Destroy(gameObject, 1.5f);
     }
     
