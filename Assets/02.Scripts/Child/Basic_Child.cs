@@ -18,7 +18,7 @@ public class Basic_Child : MonoBehaviour
     private bool isSantaPresent = false;
 
     public int ChildHealth = 15;
-    public int AttackDamage = 1;
+    public int AttackDamage;
     public float MovementSpeed = 0.4f;
     private float OriginalSpeed = 0.4f;
 
@@ -57,13 +57,20 @@ public class Basic_Child : MonoBehaviour
         {
             Santa santa = collision.GetComponent<Santa>();
             MovementSpeed = 0;
-            santa.SantaHealth -= 1;
+            santa.SantaHealth -= AttackDamage;
             isSantaPresent = true;
         }
         else if (collision.tag == "Arrow")
         {
             Attack arrow = collision.GetComponent<Attack>();
-            ChildHealth -= 1;
+            if(arrow.AType == AttackType.Arrow)
+            {
+                ChildHealth -= 1;
+            }
+            else if(arrow.AType == AttackType.Bullet)
+            {
+                ChildHealth -= 2;
+            }
             Debug.Log(ChildHealth);
             arrow.gameObject.SetActive(false);
         }
@@ -85,6 +92,8 @@ public class Basic_Child : MonoBehaviour
                 }
             }
         }
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

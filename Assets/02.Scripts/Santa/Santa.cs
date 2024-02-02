@@ -7,13 +7,13 @@ public enum SantaType
 {
     Bow,                
     Gun,                
-    Bomb,
     Sword,
-    Present
+    PresentBomb
 }
 
-public class Santa : MonoBehaviour
+public class Santa : MonoBehaviour 
 {
+    public SantaType SType;
     public int SantaHealth = 10;
     public GameObject SantaDeathPrefab;
 
@@ -23,7 +23,7 @@ public class Santa : MonoBehaviour
     }
     void Update()
     {
-            if (SantaHealth <= 0)
+            if (SantaHealth <= 0)           //»êÅ¸Á×À½
             {
                 gameObject.SetActive(false);
                 Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
