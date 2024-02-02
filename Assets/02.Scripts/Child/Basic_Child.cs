@@ -70,6 +70,7 @@ public class Basic_Child : MonoBehaviour
             MovementSpeed = 0;
             santa.SantaHealth -= AttackDamage;
             isSantaPresent = true;
+            Debug.Log($"트리거 엔터{santa.SantaHealth}");
         }
         else if (collision.tag == "Arrow")
         {
