@@ -6,13 +6,14 @@ using UnityEngine.Rendering;
 
 public class ObjectDragDown : MonoBehaviour
 {
-    private bool _batched = false;
+    public bool _batched = false;
 
     public GameObject unitPrefab;
+    
 
     // 오브젝트의 SpriteRenderer 컴포넌트
     private SpriteRenderer _spriteRenderer;
-
+    
 
     private void Start()
     {
@@ -40,9 +41,11 @@ public class ObjectDragDown : MonoBehaviour
 
                 // 오브젝트의 렌더링 순서를 변경합니다.
                 _spriteRenderer.sortingLayerName = "Unit";
+
+                // 컨테이너 콜라이더 내에 유닛 오브젝트를 생성합니다.
+                Instantiate(unitPrefab, mousePosition, Quaternion.identity);
             }
 
         }
-
     }
 }
