@@ -6,6 +6,7 @@ using UnityEngine;
 
 public enum SantaType
 {
+    Resource,
     Bow,                
     Gun,                
     Sword,
@@ -30,12 +31,12 @@ public class Santa : MonoBehaviour
     }
     void Update()
     {
-            if (SantaHealth <= 0)           //»êÅ¸Á×À½
-            {
-                gameObject.SetActive(false);
-                Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
-            }
-            if(SType == SantaType.Sword)
+        if (SantaHealth <= 0)           //»êÅ¸Á×À½
+        {
+            gameObject.SetActive(false);
+            Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
+        }
+        if (SType == SantaType.Sword)
         {
             AttackDamage = 3;
         }

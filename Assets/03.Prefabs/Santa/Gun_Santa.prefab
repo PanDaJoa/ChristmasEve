@@ -462,7 +462,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SType: 0
   SantaHealth: 10
+  AttackInterval: 1
+  AttackTimer: 0
+  AttackDamage: 0
   SantaDeathPrefab: {fileID: 8066581392058961290, guid: b3874d3f6d0235f44a59edaa57823f80, type: 3}
 --- !u!114 &8262704287493779219
 MonoBehaviour:
@@ -479,7 +483,7 @@ MonoBehaviour:
   ArrowPrefab: {fileID: 2195600096070476473, guid: d1b15fc75d97ad749afd8c0bd9ff146f, type: 3}
   Bow: {fileID: 9135033125119551461}
   Timer: 0
-  COOL_TIME: 0.8
+  COOL_TIME: 1
   AutoMode: 1
   PoolSize: 24
   _arrowPool: []
