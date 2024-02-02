@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -9,6 +10,10 @@ public class Container : MonoBehaviour
     // 오브젝트가 이미 생성되었는지를 나타내는 플래그
     private bool _full = false;
 
+
+
+   
+
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와 충돌한 경우 호출되는 함수
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,9 +22,9 @@ public class Container : MonoBehaviour
         {
             return;
         }
-        // 충돌한 오브젝트에서 ObjectDragDown 컴포넌트를 가져와 _dragDown 변수에 저장합니다.
+        // 충돌을 했을 때 other.GetComponent로 오브젝트다운을 불러오고 _dragDown에다가 저장한다.
         _dragDown = other.GetComponent<ObjectDragDown>();
-            Debug.Log("충돌");
+        Debug.Log("충돌");
     
     }
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와의 충돌에서 벗어난 경우 호출되는 함수
@@ -32,9 +37,9 @@ public class Container : MonoBehaviour
         }
         Debug.Log("벗어남");
 
-        // 충돌에서 벗어났으므로 _dragDown 변수를 null로 설정합니다.
+        // 충돌에서 벗어났으므로 _dragDown 변수를 null로 설정합니다. (충돌이 일어난 자리마다 생성이 안되게 만들어줌)
         _dragDown = null;
-      
+
 
     }
 
@@ -45,18 +50,16 @@ public class Container : MonoBehaviour
         if (!_full && _dragDown != null && Input.GetMouseButtonDown(0))
         {
             // 유닛의 프리팹을 저장
-            var unitPrefab = _dragDown.unitPrefab;
+            GameObject unitdown = _dragDown.gameObject;
 
             // 드래그된 유닛을 제거
             Destroy(_dragDown.gameObject);
 
-            // 참조를 제거
-            _dragDown = null;
-
+            Debug.Log(0);
             // 유닛을 타일의 위치에 생성
-            Instantiate(unitPrefab, this.transform.position, Quaternion.identity);
+            Instantiate(unitdown, this.transform.position, Quaternion.identity);
 
-            // 오브젝트 생성 플래그를 true로 설정
+            // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
         }
 
