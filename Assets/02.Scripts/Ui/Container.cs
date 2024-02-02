@@ -1,26 +1,23 @@
 using UnityEngine;
 
-public class Container : MonoBehaviour
+public class TileScript : MonoBehaviour
 {
-    public bool isFull;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // 들어온 오브젝트가 드래그 중인 오브젝트이고, 컨테이너가 꽉 차 있지 않다면
-        if (collision.gameObject.GetComponent<ObjectDragDown>() && !isFull)
+        // dragDown != null || !dragDown._batched
+        // 드래그된 유닛인지 확인
+        ObjectDragDown dragDown = other.GetComponent<ObjectDragDown>();
+        if (dragDown != null == dragDown._batched)
         {
-            // 컨테이너를 꽉 차게 합니다.
-            isFull = true;
-        }
-    }
+            // 유닛을 타일의 위치에 생성
+            Instantiate(dragDown.unitPrefab, this.transform.position, Quaternion.identity);
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        // 나가는 오브젝트가 드래그 중인 오브젝트라면
-        if (collision.gameObject.GetComponent<ObjectDragDown>())
-        {
-            // 컨테이너를 비웁니다.
-            isFull = false;
+            // 배치 상태를 true로 변경
+
+            dragDown._batched = true;
+
+            // 드래그된 유닛을 제거
+            Destroy(other.gameObject);
         }
     }
 }
