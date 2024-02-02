@@ -3,7 +3,11 @@ guid: 4c80de1a0b57da946a295988dadb48cf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Basic_ChildPrefab: {fileID: 8658776985372480580, guid: a611ad2916f572e49a282c00afd3f54f, type: 3}
+  - Sword_ChildPrefab: {fileID: 3833730555838459530, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
+  - Hammer_ChildPrefab: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
+  - Boom_ChildPrefab: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

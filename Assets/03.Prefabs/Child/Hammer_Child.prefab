@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5973272020347427296}
   - component: {fileID: 8607949925976853314}
   - component: {fileID: 3905877198718804001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hammer_Child
-  m_TagString: Untagged
+  m_TagString: Child
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7987978614742720204}
   - component: {fileID: 1425079930877542156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 8044991148523470828}
   - component: {fileID: 304199517076892522}
   - component: {fileID: 2285144889297154926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hammer_attack_side-overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 3444716738520897007}
   - component: {fileID: 3463435221265746499}
   - component: {fileID: 950977987406823188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: weapon_hammer_side
   m_TagString: Untagged
   m_Icon: {fileID: 0}

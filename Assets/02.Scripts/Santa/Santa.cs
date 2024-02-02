@@ -47,15 +47,14 @@ public class Santa : MonoBehaviour
             if (collision.tag == "Child")
             {
                 Basic_Child child = collision.GetComponent<Basic_Child>();
-                for(int i = 0; i< child.ChildHealth; i++) 
-                {
+                
                     if (AttackTimer <= 0f)
                     {
                         AttackTimer = AttackInterval;
                         child.ChildHealth -= AttackDamage;
                         Debug.Log($"어린이체력:{child.ChildHealth}");
                     }
-                }    
+                
         }
        
     }

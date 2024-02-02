@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5878616107311421425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9063399996138606849}
+  - component: {fileID: 3612774190991732502}
+  m_Layer: 0
+  m_Name: ChildSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9063399996138606849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878616107311421425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.08, y: 0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3612774190991732502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878616107311421425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c80de1a0b57da946a295988dadb48cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Basic_ChildPrefab: {fileID: 8658776985372480580, guid: a611ad2916f572e49a282c00afd3f54f, type: 3}
+  Sword_ChildPrefab: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
+  Hammer_ChildPrefab: {fileID: 3833730555838459530, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
+  Boom_ChildPrefab: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
+  MinSpawnInterval: 4
+  MaxSpawnInterval: 8
+  SpawnTimer: 0
+  SpawnInterval: 0
+  PoolSize: 15
+  ChildPool: []
+  PoolCount: 20
+  BoomChildPool: []
