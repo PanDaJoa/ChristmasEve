@@ -34,6 +34,8 @@ public class ObjectDragDown : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             this.transform.position = mousePosition;
 
+
+
         }
         
     }
