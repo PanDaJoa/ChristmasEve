@@ -1,16 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameOverZone : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D otherCollider)
+    public void OnTriggerEnter2D(Collider2D otherCollider)
     {
+       
         if(otherCollider.tag == "Child")
         {
+            //TextContrl textcontrl = GetComponent<TextContrl>();
             otherCollider.gameObject.SetActive(false);
-            Debug.Log("°ÔÀÓ¿À¹ö");
-            Debug.Log("¾ÆÀÌµéÀÌ ¼±¹°À» ÀüºÎ ÈÉÃÄ¹ö·È½À´Ï´Ù¤Ì¤Ì");
+            //GameManager.instance.ShowGameOver();
+            Debug.Log("ê²Œì„ì˜¤ë²„");
+            Debug.Log("ì•„ì´ë“¤ì´ ì„ ë¬¼ì„ ì „ë¶€ í›”ì³ë²„ë ¸ìŠµë‹ˆë‹¤ã…œã…œ");
         }
     }
 }
