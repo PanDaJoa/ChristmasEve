@@ -170,7 +170,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SType: 0
   SantaHealth: 10
+  AttackInterval: 1
+  AttackTimer: 0
+  AttackDamage: 0
   SantaDeathPrefab: {fileID: 8932783373868597431, guid: 1007e76b0311b894d947f0f43250aa77, type: 3}
 --- !u!61 &-698941725574272620
 BoxCollider2D:
@@ -204,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16722322, y: -0.37931192}
+  m_Offset: {x: 0.15504014, y: -0.48591226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -215,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6830468, y: 1.8171995}
+  m_Size: {x: 1.1957304, y: 1.4090725}
   m_EdgeRadius: 0
 --- !u!1 &7225655115075531056
 GameObject:
