@@ -36,6 +36,18 @@ public class Container : MonoBehaviour
         Debug.Log("충돌");
         // 충돌에서 벗어났을 때 스프라이트를 투명하게 만듭니다.
 
+        // 충돌한 오브젝트에서 Unit 컴포넌트를 가져옵니다.
+        Unit unit = other.gameObject.GetComponent<Unit>();
+
+        // Unit 컴포넌트가 있고, unitSprite가 설정되어 있다면
+        if (unit != null && unit.unitSprite != null)
+        {
+            // 컨테이너의 SpriteRenderer 컴포넌트를 가져옵니다.
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+            // 컨테이너의 스프라이트를 유닛의 스프라이트로 변경합니다.
+            spriteRenderer.sprite = unit.unitSprite;
+        }
     }
 
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와의 충돌에서 벗어난 경우 호출되는 함수
@@ -57,36 +69,27 @@ public class Container : MonoBehaviour
             _spriteRenderer.enabled = false;
         }
 
-        // 드래그 중인 오브젝트의 이미지를 콜라이더 이미지로 바꿉니다.
-        if (_dragDown != null)
-        {
-            SpriteRenderer dragSpriteRenderer = _dragDown.GetComponent<SpriteRenderer>();
-            if (dragSpriteRenderer != null)
-            {
-                dragSpriteRenderer.sprite = colliderSprite;
-            }
-        }
+
     }
     public void Update()
     {
-          // 만약 _full이 false이고, _dragDown이 null이 아니라면, 즉 오브젝트가 아직 생성되지 않았고 드래그 중인 오브젝트가 있다면
+        // 만약 _full이 false이고, _dragDown이 null이 아니라면, 즉 오브젝트가 아직 생성되지 않았고 드래그 중인 오브젝트가 있다면
         if (!_full && _dragDown != null && Input.GetMouseButtonDown(0))
         {
-          // 유닛의 프리팹을 저장
-          GameObject unitdown = _dragDown.gameObject;
+            // 유닛의 프리팹을 저장
+            GameObject unitdown = _dragDown.gameObject;
 
-           // 드래그된 유닛을 제거
-           Destroy(_dragDown.gameObject);
+            // 드래그된 유닛을 제거
+            Destroy(_dragDown.gameObject);
 
-           
 
-           // 유닛을 타일의 위치에 생성
-           Instantiate(unitdown, this.transform.position, transform.rotation);
+
+            // 유닛을 타일의 위치에 생성
+            Instantiate(unitdown, this.transform.position, transform.rotation);
 
             // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
         }
-        
     }
 
 }

@@ -22,14 +22,4 @@ public class Drag_and_Delete : MonoBehaviour
         }
     }
 
-    void OnMouseUp()
-    {
-        isDragging = true;
-    }
-
-    void OnMouseDown()
-    {
-        isDragging = false;
-    }
-
 }
