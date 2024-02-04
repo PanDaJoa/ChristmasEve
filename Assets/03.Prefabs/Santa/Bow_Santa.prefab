@@ -449,7 +449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SType: 0
   SantaHealth: 10
+  AttackInterval: 1
+  AttackTimer: 0
+  AttackDamage: 0
   SantaDeathPrefab: {fileID: 9092701907691083904, guid: 9d721f5af70fd4143b03bd69ec9b2dad, type: 3}
 --- !u!61 &8843257420170482427
 BoxCollider2D:
@@ -483,7 +487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.035742998, y: -0.2573447}
+  m_Offset: {x: -0.1691742, y: -0.2735182}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -494,5 +498,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2981944, y: 1.9992151}
+  m_Size: {x: 1.031332, y: 1.3361034}
   m_EdgeRadius: 0
