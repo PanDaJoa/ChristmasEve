@@ -62,7 +62,7 @@ public class Santa : MonoBehaviour
                         Debug.Log($"어린이체력:{child.ChildHealth}");
                     }
                 
-        }
+            }
        
     }
 
