@@ -22,9 +22,10 @@ public class Bomb : MonoBehaviour
         CurrentTime -= Time.deltaTime;
         if (collision.tag == "Child")
         {
+            Debug.Log("폭파준비");
             if (CurrentTime <= 0f)
             {
-                
+                Debug.Log("타이머 준비 끝");
                 Basic_Child child = collision.GetComponent<Basic_Child>();
                 child.ChildHealth -= 30;
                 CurrentTime = Timer;
