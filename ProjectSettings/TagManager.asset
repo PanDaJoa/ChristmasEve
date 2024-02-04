@@ -11,6 +11,7 @@ TagManager:
   - Coin
   - Present
   - Bomb
+  - ChildBoom
   layers:
   - Default
   - TransparentFX
