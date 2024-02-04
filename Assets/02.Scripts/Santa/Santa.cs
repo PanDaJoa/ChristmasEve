@@ -24,6 +24,7 @@ public class Santa : MonoBehaviour
     
 
     public GameObject SantaDeathPrefab;
+   
 
     public void Init()
     {
