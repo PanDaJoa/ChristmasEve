@@ -15,6 +15,7 @@ TagManager:
   - Card
   - Tile
   - EmptyTile
+  - Wallet
   layers:
   - Default
   - TransparentFX
