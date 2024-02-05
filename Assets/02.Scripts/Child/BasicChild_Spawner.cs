@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicChild_Spawner : MonoBehaviour
 {
+    bool isGameEnded = false;
+
     public GameObject Basic_ChildPrefab;
     public GameObject Sword_ChildPrefab;
     public GameObject Hammer_ChildPrefab;
@@ -76,7 +78,8 @@ public class BasicChild_Spawner : MonoBehaviour
         }
         if (GameEndTimer <= 0f && BossTimer <= 0f)
         {
-            this.gameObject.SetActive(false);
+            isGameEnded = true;
+            DestroyOrDisableSpawner();
         }
 
     }
@@ -147,10 +150,12 @@ public class BasicChild_Spawner : MonoBehaviour
     private void BossTime()
     {
         SpawnInterval = 1;
-        Basic_Child child = GetComponent<Basic_Child>();
-        BoomChild_Child boomChild = GetComponent<BoomChild_Child>();
-        child.OriginalSpeed = 1.1f;   
-        boomChild.MovementSpeed = 1.2f;
+        
+    }
+    private void DestroyOrDisableSpawner()
+    {
+        // BasicChild_Spawner를 비활성화 또는 파괴하는 코드를 추가합니다.
+        gameObject.SetActive(false); // 비활성화
     }
 
-}
+    }

@@ -455,6 +455,7 @@ MonoBehaviour:
   AttackTimer: 0
   AttackDamage: 0
   SantaDeathPrefab: {fileID: 9092701907691083904, guid: 9d721f5af70fd4143b03bd69ec9b2dad, type: 3}
+  ContainerPrefab: {fileID: 4279945870511248868, guid: 9e30d08c32ad94540beb3f0d51b32e8a, type: 3}
 --- !u!61 &8843257420170482427
 BoxCollider2D:
   m_ObjectHideFlags: 0
