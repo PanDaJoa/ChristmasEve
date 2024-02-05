@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 5565793848243205563}
   - component: {fileID: -5611206597286121224}
   - component: {fileID: 7110975511582071243}
+  - component: {fileID: -7457382404298030043}
   m_Layer: 6
   m_Name: Bow_Santa UI
   m_TagString: Santa
@@ -306,7 +307,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff008773ec6511a488e6bfc6b1c3cc79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 6f9eac3ffff84b141895b3de5f6e0a61, type: 3}
+  unitSprite: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
+--- !u!114 &-7457382404298030043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520118419715251550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object_Plant_Drag: {fileID: 5520118419715251550}
+  cooldown: 3
 --- !u!1 &6395559198895774083
 GameObject:
   m_ObjectHideFlags: 0

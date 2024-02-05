@@ -12,7 +12,10 @@ public class ObjectCard : MonoBehaviour
     private float lastSummonTime; // 마지막으로 소환한 시간을 저장
    
     private bool isOnCooldown = false; // 쿨타임 상태를 저장하는 플래그
-    
+
+
+    // 카드를 클릭하면
+
     // 드래그 유닛 이미지 바꾸는 코드
     /*  public Sprite mySprite;
         public Container[] containers;*/
@@ -21,18 +24,38 @@ public class ObjectCard : MonoBehaviour
     // 카드를 클릭하면
     public void OnClickCard()
     {
-        // 쿨타임이 아니면
-        if (!isOnCooldown) 
+        if (CardManager.Instance.BuildMode)
         {
+            return;
+        }
+
+        // 쿨타임이 아니면
+        if (!isOnCooldown)
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0;
+
+            // 마우스 위치에 이미 유닛이 있다면 삭제
+            
+
+
             Debug.Log("유닛소환");
+
+
+
             // 유닛을 소환하고
             Instantiate(Object_Plant_Drag);
-            
+
+            CardManager.Instance.BuildMode = true;
+
             // 마지막 소환 시간을 현재 시간으로 업데이트
             lastSummonTime = Time.deltaTime;
-            
+
             StartCoroutine(Cooldown()); // 쿨타임 코루틴을 시작            
+
+
         }
+
     }
 
     IEnumerator Cooldown()
