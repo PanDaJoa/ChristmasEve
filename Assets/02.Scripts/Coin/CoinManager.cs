@@ -19,7 +19,7 @@ public class CoinManager : MonoBehaviour
                 return;
             }
             _coin = value;
-            CoinTextUI.text = $"Coin: {_coin}";
+            CoinTextUI.text = $"{_coin}";
         }
     }
     public static CoinManager instance { get; private set; }

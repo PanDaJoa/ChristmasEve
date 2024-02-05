@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9063399996138606849}
-  - component: {fileID: 3612774190991732502}
+  - component: {fileID: 8347272474924097497}
   m_Layer: 0
   m_Name: ChildSpawner
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3612774190991732502
+--- !u!114 &8347272474924097497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,14 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Basic_ChildPrefab: {fileID: 8658776985372480580, guid: a611ad2916f572e49a282c00afd3f54f, type: 3}
-  Sword_ChildPrefab: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
-  Hammer_ChildPrefab: {fileID: 3833730555838459530, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
+  Sword_ChildPrefab: {fileID: 3833730555838459530, guid: a6a896c2723beef4697ac0c8ec8bc8c8, type: 3}
+  Hammer_ChildPrefab: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
   Boom_ChildPrefab: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
-  MinSpawnInterval: 4
-  MaxSpawnInterval: 8
+  MinSpawnInterval: 5
+  MaxSpawnInterval: 9
   SpawnTimer: 0
   SpawnInterval: 0
-  PoolSize: 15
+  GameEndTimer: 30
+  BossTimer: 10
+  PoolSize: 20
   ChildPool: []
-  PoolCount: 20
   BoomChildPool: []

@@ -4,51 +4,46 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
-{   // Resource _Santa 자동 재화 생성
-    // 코인 자동 생성
-    // 코인 생성 확률
-    // 코인 생성 쿨타임 설정
+{
+    public float Speed = 7f;
+    private GameObject _target;
 
-    // 코인 저장 -> 민성오빠
-
+    private bool _isFlying = false; // 날아가는 중인지 여부를 나타내는 플래그
 
     void Start()
     {
-
+        _target = GameObject.Find("Wallet");
     }
-        void Update()
-    {
-        // 마우스 왼쪽 버튼이 눌렸는지 확인
-        if (Input.GetMouseButtonDown(0))
-        {
-            // 마우스 포인터가 위치한 스크린 좌표를 Ray로 변환
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-            // 오브젝트가 클릭되었는지 확인
-            if (hit.collider != null)
+    void Update()
+    {
+        if (_isFlying) // 날아가는 중일 때에만 이동
+        {
+            Vector2 dir = _target.transform.position - transform.position;
+            dir.Normalize();
+            transform.position += (Vector3)(dir * Speed) * Time.deltaTime;
+
+            // 만약 Coin이 Wallet에 닿았다면
+            if (Vector2.Distance(transform.position, _target.transform.position) < 0.1f)
             {
-                // 클릭된 오브젝트가 Coin 태그를 가지고 있는지 확인
-                if (hit.collider.CompareTag("Coin"))
-                {
-                    // 클릭된 Coin 오브젝트의 동작 수행
-                    Coin coin = hit.collider.GetComponent<Coin>();
-                    if (coin != null)
-                    {
-                        coin.Collect(); // Coin 오브젝트에서 Collect() 메서드 호출
-                    }
-                }
+                Collect();
             }
         }
-
-        
     }
 
-    
-    public void Collect()
+    private void OnMouseDown() // 마우스 클릭 시 호출되는 메서드
     {
-        Destroy(gameObject);
-        CoinManager.instance.Coin += 50;
+        if (!_isFlying) // 날아가는 중이 아닐 때에만 동작
+        {
+            _isFlying = true; // 날아가는 상태로 변경
+        }
+    }
+
+    // Coin이 Wallet에 닿았을 때 호출될 메서드
+    private void Collect()
+    {
+        CoinManager.instance.Coin += 50; // 점수를 50 증가시킴
+        Destroy(gameObject); // 코인 오브젝트 파괴
     }
 
 }

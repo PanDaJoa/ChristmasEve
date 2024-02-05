@@ -13,6 +13,9 @@ TagManager:
   - Bomb
   - ChildBoom
   - Card
+  - Tile
+  - EmptyTile
+  - Wallet
   layers:
   - Default
   - TransparentFX
