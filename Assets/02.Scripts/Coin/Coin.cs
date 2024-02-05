@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -58,6 +59,7 @@ public class Coin : MonoBehaviour
     public void Collect()
     {
         Destroy(gameObject);
+        CoinManager.instance.Coin += 1;
     }
 
 }
