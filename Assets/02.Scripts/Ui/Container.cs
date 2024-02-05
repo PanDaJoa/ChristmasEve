@@ -86,6 +86,9 @@ public class Container : MonoBehaviour
             // 유닛을 타일의 위치에 생성
             Instantiate(unitdown, this.transform.position, transform.rotation);
 
+            CardManager.Instance.BuildMode = false;
+
+
             // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
         }
