@@ -116,12 +116,13 @@ GameObject:
   m_Component:
   - component: {fileID: 444338369857610578}
   - component: {fileID: 3517057385058926436}
+  - component: {fileID: -5611206597286121224}
+  - component: {fileID: -7457382404298030043}
+  - component: {fileID: 7110975511582071243}
+  - component: {fileID: -6603036011693984634}
+  - component: {fileID: 5565793848243205563}
   - component: {fileID: 7618580771702580814}
   - component: {fileID: 376984704704670859}
-  - component: {fileID: 5565793848243205563}
-  - component: {fileID: -5611206597286121224}
-  - component: {fileID: 7110975511582071243}
-  - component: {fileID: -7457382404298030043}
   m_Layer: 6
   m_Name: Bow_Santa UI
   m_TagString: Santa
@@ -186,8 +187,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -333761115
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5be6fb1723654d8eb4c0a07a277845e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -200,7 +201,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7618580771702580814
+--- !u!114 &-5611206597286121224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,17 +210,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5520118419715251550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ec1ba072c702740b27f01a5f398859, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cff7fcf82c24fe44ab78ae019f4149a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArrowPrefab: {fileID: 1926713656329148465, guid: 6d5f7651ec6e434bb1b5b41d6d1c92c8, type: 3}
-  Bow: {fileID: 6395559198895774083}
-  Timer: 0
-  COOL_TIME: 1.5
-  AutoMode: 1
-  PoolSize: 24
-  _arrowPool: []
---- !u!114 &376984704704670859
+  _batched: 0
+--- !u!114 &-7457382404298030043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,15 +223,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 5520118419715251550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SType: 0
-  SantaHealth: 10
-  AttackInterval: 1
-  AttackTimer: 0
-  AttackDamage: 0
-  SantaDeathPrefab: {fileID: 9092701907691083904, guid: 9d721f5af70fd4143b03bd69ec9b2dad, type: 3}
+  Object_Plant_Drag: {fileID: 5520118419715251550}
+  cooldown: 3
+--- !u!114 &7110975511582071243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520118419715251550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff008773ec6511a488e6bfc6b1c3cc79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSprite: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
+--- !u!114 &-6603036011693984634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520118419715251550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f460597af2f92f248802e12b427ddcb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildMode: 0
 --- !u!61 &5565793848243205563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,7 +299,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &-5611206597286121224
+--- !u!114 &7618580771702580814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,11 +308,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5520118419715251550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cff7fcf82c24fe44ab78ae019f4149a, type: 3}
+  m_Script: {fileID: 11500000, guid: b0ec1ba072c702740b27f01a5f398859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _batched: 0
---- !u!114 &7110975511582071243
+  ArrowPrefab: {fileID: 1926713656329148465, guid: 6d5f7651ec6e434bb1b5b41d6d1c92c8, type: 3}
+  Bow: {fileID: 6395559198895774083}
+  Timer: 0
+  COOL_TIME: 1.5
+  AutoMode: 1
+  PoolSize: 24
+  _arrowPool: []
+--- !u!114 &376984704704670859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,24 +327,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5520118419715251550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff008773ec6511a488e6bfc6b1c3cc79, type: 3}
+  m_Script: {fileID: 11500000, guid: d9a139a4f05fa5d4eb517557db0909c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
---- !u!114 &-7457382404298030043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5520118419715251550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Object_Plant_Drag: {fileID: 5520118419715251550}
-  cooldown: 3
+  SType: 0
+  SantaHealth: 10
+  AttackInterval: 1
+  AttackTimer: 0
+  AttackDamage: 0
+  SantaDeathPrefab: {fileID: 9092701907691083904, guid: 9d721f5af70fd4143b03bd69ec9b2dad, type: 3}
 --- !u!1 &6395559198895774083
 GameObject:
   m_ObjectHideFlags: 0

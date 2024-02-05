@@ -24,13 +24,10 @@ public class Santa : MonoBehaviour
     
 
     public GameObject SantaDeathPrefab;
-   
+    public GameObject ContainerPrefab;
 
-    public void Init()
-    {
-        SantaHealth = 10;
-        AttackInterval = 1f;
-}
+
+
 
     void Start()
     {
@@ -42,6 +39,7 @@ public class Santa : MonoBehaviour
         {
             gameObject.SetActive(false);
             Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
+            Instantiate(ContainerPrefab, transform.position, transform.rotation);
         }
         if (SType == SantaType.Sword)
         {

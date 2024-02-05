@@ -41,21 +41,10 @@ public class Coin : MonoBehaviour
             }
         }
 
-        /*   CurrentTime += Time.deltaTime;
-           if (CurrentTime >= 5f)
-           {
-               GameObject Coin = Instantiate(CoinPrefab);
-               Coin.SetActive(true);
-           }*/
+        
     }
 
-    /*   public void MakeItem()
-       {
-           GameObject Coin = Instantiate(CoinPrefab);
-
-           Santa santa = GetComponent<Santa>();
-           Coin.transform.position = santa.transform.position;
-       }*/
+    
     public void Collect()
     {
         Destroy(gameObject);
