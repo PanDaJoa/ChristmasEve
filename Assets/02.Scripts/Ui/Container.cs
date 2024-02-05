@@ -14,8 +14,7 @@ public class Container : MonoBehaviour
     // 오브젝트 스프라이트 렌더러를 가져옴
     public SpriteRenderer _spriteRenderer;
 
-    // 콜라이더 이미지
-    public Sprite colliderSprite;
+
 
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와 충돌한 경우 호출되는 함수
     private void OnTriggerEnter2D(Collider2D other)
@@ -63,7 +62,7 @@ public class Container : MonoBehaviour
         // 충돌에서 벗어났으므로 _dragDown 변수를 null로 설정합니다. (충돌이 일어난 자리마다 생성이 안되게 만들어줌)
         _dragDown = null;
 
-        // 충돌에서 벗어났을 때 스프라이트를 숨깁니다.
+        // 충돌에서 벗어났을 때 스프라이트를 숨깁니다.// _spriteRenderer가 null이 아닌 경우에만, 즉 SpriteRenderer 컴포넌트가 정상적으로 참조되고 있는 경우에만 다음 코드를 실행
         if (_spriteRenderer != null)
         {
             _spriteRenderer.enabled = false;
