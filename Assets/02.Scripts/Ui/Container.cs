@@ -33,7 +33,7 @@ public class Container : MonoBehaviour
         // 충돌을 했을 때 other.GetComponent로 오브젝트다운을 불러오고 _dragDown에다가 저장한다.
         _dragDown = other.GetComponent<ObjectDragDown>();
         Debug.Log("충돌");
-        // 충돌에서 벗어났을 때 스프라이트를 투명하게 만듭니다.
+        // 충돌에서 벗어났을 때 스프라이트를/*/**/*/ 투명하게 만듭니다.
 
         // 충돌한 오브젝트에서 Unit 컴포넌트를 가져옵니다.
         Unit unit = other.gameObject.GetComponent<Unit>();
@@ -79,18 +79,21 @@ public class Container : MonoBehaviour
             GameObject unitdown = _dragDown.gameObject;
 
             // 드래그된 유닛을 제거
-            Destroy(_dragDown.gameObject);
-
+            // Destroy(_dragDown.gameObject);
 
 
             // 유닛을 타일의 위치에 생성
-            Instantiate(unitdown, this.transform.position, transform.rotation);
+            //Instantiate(unitdown, this.transform.position, transform.rotation);
+
+            unitdown.transform.position = this.transform.position;
+            unitdown.GetComponent<ObjectDragDown>()._batched = true;
 
             CardManager.Instance.BuildMode = false;
 
 
             // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
+
         }
     }
 

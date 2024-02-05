@@ -27,7 +27,7 @@ TagManager:
   - Spawner
   - Arrow
   - Coin
-  - 
+  - Container
   - 
   - 
   - 
@@ -69,4 +69,7 @@ TagManager:
     locked: 0
   - name: Coin
     uniqueID: 3965733451
+    locked: 0
+  - name: Container
+    uniqueID: 649394739
     locked: 0
