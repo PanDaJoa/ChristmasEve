@@ -12,6 +12,7 @@ TagManager:
   - Present
   - Bomb
   - ChildBoom
+  - Card
   layers:
   - Default
   - TransparentFX

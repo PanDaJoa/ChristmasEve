@@ -20,7 +20,7 @@ public class Basic_Child : MonoBehaviour
     public int ChildHealth = 15;
     public int AttackDamage;
     public float MovementSpeed = 0.4f;
-    private float OriginalSpeed = 0.4f;
+    public float OriginalSpeed = 0.4f;
 
     public const float AttackInterval = 0.4f;
     public float AttackTimer = 0;

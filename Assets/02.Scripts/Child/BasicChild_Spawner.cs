@@ -10,12 +10,14 @@ public class BasicChild_Spawner : MonoBehaviour
 
     public GameObject Boom_ChildPrefab;
 
-    public float MinSpawnInterval = 4f;
-    public float MaxSpawnInterval = 8f;
+    public float MinSpawnInterval = 5f;
+    public float MaxSpawnInterval = 9f;
     public float SpawnTimer = 0f;
     public float SpawnInterval = 0f;
 
-    public float GameEndTimer = 90f;
+    public float GameEndTimer = 30f;
+
+    public float BossTimer = 10f;
 
     public int PoolSize = 20;
     public List<Basic_Child> ChildPool;
@@ -59,14 +61,24 @@ public class BasicChild_Spawner : MonoBehaviour
     
     void Update()
     {
+        GameEndTimer -= Time.deltaTime;
         SpawnTimer -= Time.deltaTime;
+        BossTimer -= Time.deltaTime;
 
         if (SpawnTimer <= 0f)
         {
             SpawnChild();
             SpawnTimer = SpawnInterval;
         }
-        
+        if (BossTimer <= 0f)
+        {
+            BossTime();
+        }
+        if (GameEndTimer <= 0f && BossTimer <= 0f)
+        {
+            this.gameObject.SetActive(false);
+        }
+
     }
 
         private void SetRandomSpawnInterval()
@@ -132,5 +144,13 @@ public class BasicChild_Spawner : MonoBehaviour
         return null;
     }
 
+    private void BossTime()
+    {
+        SpawnInterval = 1;
+        Basic_Child child = GetComponent<Basic_Child>();
+        BoomChild_Child boomChild = GetComponent<BoomChild_Child>();
+        child.OriginalSpeed = 1.1f;   
+        boomChild.MovementSpeed = 1.2f;
+    }
 
 }
