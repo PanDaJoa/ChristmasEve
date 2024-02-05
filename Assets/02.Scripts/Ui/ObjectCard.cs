@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+public enum Store
+{
+
+
+}
+
 public class ObjectCard : MonoBehaviour
 {
     public GameObject Object_Plant_Drag;
