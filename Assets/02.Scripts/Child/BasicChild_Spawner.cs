@@ -15,6 +15,8 @@ public class BasicChild_Spawner : MonoBehaviour
     public float SpawnTimer = 0f;
     public float SpawnInterval = 0f;
 
+    public float GameEndTimer = 90f;
+
     public int PoolSize = 20;
     public List<Basic_Child> ChildPool;
     public List<BoomChild_Child> BoomChildPool;
@@ -64,73 +66,10 @@ public class BasicChild_Spawner : MonoBehaviour
             SpawnChild();
             SpawnTimer = SpawnInterval;
         }
-        /* SetRandomSpawnInterval();
-         if (SpawnTimer <= 0f)
-         {
-             Basic_Child child = null;
-             BoomChild_Child boomchild = null;
-             int randomNumber = Random.Range(0, 4);
-             if(randomNumber == 0)
-             {
-                 foreach(Basic_Child c in ChildPool)
-                 {
-                     if ( !c.gameObject.activeInHierarchy && c.CType == ChildType.Basic)
-                     {
-                         child = c; 
-                         break;
-                     }
-                 }
-             }
-             else if (randomNumber == 1)
-             {
-                 foreach (Basic_Child c in ChildPool)
-                 {
-                     if (!c.gameObject.activeInHierarchy && c.CType == ChildType.Sword)
-                     {
-                         child = c; 
-                         break;
-                     }
-                 }
-             }
-             if (randomNumber == 2)
-             {
-                 foreach (Basic_Child c in ChildPool)
-                 {
-                     if (!c.gameObject.activeInHierarchy && c.CType == ChildType.Hammer)
-                     {
-                         child = c; 
-                         break;
-                     }
-                 }
-             }
-             else if (randomNumber == 3)
-             {
-                 foreach (BoomChild_Child b in BoomChildPool)
-                 {
-                     if (!b.gameObject.activeInHierarchy && b.BType == BoomChildType.Boom)
-                     {
-                         boomchild = b; 
-                         break;
-                     }
-                 }
-             }
-
-             //SpawnChild();
-             child.transform.position = this.transform.position;
-             boomchild.transform.position = transform.position;
-
-             child.gameObject.SetActive(true);
-             boomchild.gameObject.SetActive(true);
-
-             SpawnTimer = SpawnInterval;
-         }*/
+        
     }
 
-    /*private void SpawnChild()
-    {
-        Instantiate(ChildPrefab, transform.position, transform.rotation);
-    }*/
-    private void SetRandomSpawnInterval()
+        private void SetRandomSpawnInterval()
     {
         SpawnInterval = Random.Range(MinSpawnInterval, MaxSpawnInterval);
     }

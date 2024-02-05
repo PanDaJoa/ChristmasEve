@@ -59,7 +59,7 @@ public class Coin : MonoBehaviour
     public void Collect()
     {
         Destroy(gameObject);
-        CoinManager.instance.Coin += 1;
+        CoinManager.instance.Coin += 50;
     }
 
 }
