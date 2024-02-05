@@ -20,6 +20,7 @@ public class ObjectDragDown : MonoBehaviour
         // SpriteRenderer 컴포넌트를 가져옵니다.
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
+
  
 
     }
@@ -33,9 +34,6 @@ public class ObjectDragDown : MonoBehaviour
             Vector2 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             this.transform.position = mousePosition;
-
-
-
         }
         
     }

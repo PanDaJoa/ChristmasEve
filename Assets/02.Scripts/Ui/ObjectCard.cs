@@ -32,16 +32,8 @@ public class ObjectCard : MonoBehaviour
         // 쿨타임이 아니면
         if (!isOnCooldown)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0;
-
-            // 마우스 위치에 이미 유닛이 있다면 삭제
-            
-
 
             Debug.Log("유닛소환");
-
-
 
             // 유닛을 소환하고
             Instantiate(Object_Plant_Drag);
