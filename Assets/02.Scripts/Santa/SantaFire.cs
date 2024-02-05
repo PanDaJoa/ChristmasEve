@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SantaFire : MonoBehaviour
@@ -19,6 +20,10 @@ public class SantaFire : MonoBehaviour
     public int PoolSize = 24;           //내나이
     public List<Attack> _arrowPool;
 
+    // ObjectDragDown 컴포넌트를 저장할 변수
+    private ObjectDragDown objectDragDown;
+
+
     private void Awake()
     {
         _arrowPool = new List<Attack>();
@@ -33,16 +38,24 @@ public class SantaFire : MonoBehaviour
     void Start()
 
     {
+        // ObjectDragDown 컴포넌트를 가져와서 objectDragDown 변수에 저장
+        objectDragDown = GetComponent<ObjectDragDown>();
         Timer = 0f;
-        AutoMode = true;
+        
     }
 
     void Update()
     {
         Timer -= Time.deltaTime;
-        bool ready = AutoMode;
+
+        // 드래그 중이 아닐 때만 AutoMode 활성화
+        // 즉, AutoMode는 true이고, 동시에 드래그 중이 아닐 때만 ready가 true가 됨
+        bool ready = AutoMode && !objectDragDown.IsDragging();
+
+        // 만약 타이머가 0 이하이고, ready가 true라면 (즉, AutoMode가 활성화되고, 드래그 중이 아니라면)
         if (Timer <= 0 && ready)
         {
+            // 타이머를 COOL_TIME으로 다시 설정하고, Fire 메서드를 실행
             Timer = COOL_TIME;
             Fire();
         }

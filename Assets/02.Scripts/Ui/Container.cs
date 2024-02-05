@@ -14,7 +14,7 @@ public class Container : MonoBehaviour
     // 오브젝트 스프라이트 렌더러를 가져옴
     public SpriteRenderer _spriteRenderer;
 
-
+ 
 
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와 충돌한 경우 호출되는 함수
     private void OnTriggerEnter2D(Collider2D other)
@@ -33,19 +33,20 @@ public class Container : MonoBehaviour
         // 충돌을 했을 때 other.GetComponent로 오브젝트다운을 불러오고 _dragDown에다가 저장한다.
         _dragDown = other.GetComponent<ObjectDragDown>();
         Debug.Log("충돌");
-        // 충돌에서 벗어났을 때 스프라이트를/*/**/*/ 투명하게 만듭니다.
+
 
         // 충돌한 오브젝트에서 Unit 컴포넌트를 가져옵니다.
-        Unit unit = other.gameObject.GetComponent<Unit>();
+        ObjectDragDown unit = other.gameObject.GetComponent<ObjectDragDown>();
 
         // Unit 컴포넌트가 있고, unitSprite가 설정되어 있다면
-        if (unit != null && unit.unitSprite != null)
+        if (unit != null && unit.ContainerImage != null)
         {
             // 컨테이너의 SpriteRenderer 컴포넌트를 가져옵니다.
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
             // 컨테이너의 스프라이트를 유닛의 스프라이트로 변경합니다.
-            spriteRenderer.sprite = unit.unitSprite;
+            spriteRenderer.sprite = unit.ContainerImage;
+           
         }
     }
 
@@ -78,22 +79,18 @@ public class Container : MonoBehaviour
             // 유닛의 프리팹을 저장
             GameObject unitdown = _dragDown.gameObject;
 
-            // 드래그된 유닛을 제거
-            // Destroy(_dragDown.gameObject);
-
-
-            // 유닛을 타일의 위치에 생성
-            //Instantiate(unitdown, this.transform.position, transform.rotation);
-
             unitdown.transform.position = this.transform.position;
             unitdown.GetComponent<ObjectDragDown>()._batched = true;
 
             CardManager.Instance.BuildMode = false;
 
 
+
             // 오브젝트 생성 플래그를 true로 설정 (미리 깔아져 있는 곳에 안깔리게 한다.)
             _full = true;
 
+            // 스프라이트 렌더러 삭제
+            Destroy(_spriteRenderer);
         }
     }
 

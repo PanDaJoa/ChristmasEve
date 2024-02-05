@@ -16,7 +16,7 @@ public class Drag_and_Delete : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D otherCollider)
     {
-        if (isDragging && otherCollider.CompareTag("Target"))
+        if (isDragging && otherCollider.CompareTag("Santa"))
         {
             Destroy(otherCollider.gameObject); // 충돌한 오브젝트 제거
         }
