@@ -101,7 +101,7 @@ public class Basic_Child : MonoBehaviour
         AttackTimer -= Time.deltaTime;
         if (collision.tag == "Santa")
         {
-            MovementSpeed = 0;
+            MovementSpeed -= 0.1f;
             Santa santa = collision.GetComponent<Santa>();
             isSantaPresent = true;
             if (AttackTimer <= 0f)
