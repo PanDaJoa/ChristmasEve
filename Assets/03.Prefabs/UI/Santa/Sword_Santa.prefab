@@ -223,7 +223,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.63, y: 0.96, z: 0}
-  m_LocalScale: {x: -0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2363438932022349011}
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _batched: 0
-  ContainerImage: {fileID: 0}
+  ContainerImage: {fileID: 21300000, guid: e50a95a5e5616d34ba7bf0e4a896efcb, type: 3}
 --- !u!114 &8049479168802593180
 MonoBehaviour:
   m_ObjectHideFlags: 0
