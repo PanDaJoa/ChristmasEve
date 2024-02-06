@@ -145,5 +145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object_Plant_Drag: {fileID: 3326803857264730866, guid: 43a50f1073ee10b4bb0119ea36c66366, type: 3}
+  Object_Plant_Drag: {fileID: 3326803857264730866, guid: 17e1ecf30bd9aba46a89043a097ce138, type: 3}
   cooldown: 3

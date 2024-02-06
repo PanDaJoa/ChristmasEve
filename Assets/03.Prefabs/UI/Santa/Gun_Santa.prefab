@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _batched: 0
-  ContainerImage: {fileID: 21300000, guid: 85f062a5c6391ef4abf1d0c9f9ee5abd, type: 3}
+  ContainerImage: {fileID: 21300000, guid: 0cb435af7dd44b044ad1919210e9d710, type: 3}
 --- !u!1 &9073613016727875355
 GameObject:
   m_ObjectHideFlags: 0
