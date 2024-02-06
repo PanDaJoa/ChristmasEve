@@ -547,9 +547,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverZone
       objectReference: {fileID: 0}
+    - target: {fileID: 6791880258513264526, guid: 905270a8693852842a712927985a3d0b, type: 3}
+      propertyPath: m_SortingLayer
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791880258513264526, guid: 905270a8693852842a712927985a3d0b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 284063333
+      objectReference: {fileID: 0}
     - target: {fileID: 7702894057426327784, guid: 905270a8693852842a712927985a3d0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.59
+      value: -7.03
       objectReference: {fileID: 0}
     - target: {fileID: 7702894057426327784, guid: 905270a8693852842a712927985a3d0b, type: 3}
       propertyPath: m_LocalPosition.y
