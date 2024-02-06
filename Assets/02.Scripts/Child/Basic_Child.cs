@@ -11,9 +11,8 @@ public enum ChildType
 }
 public class Basic_Child : MonoBehaviour
 {
-    public GameObject ChildDeathPrefab;
-
     public ChildType CType;
+    public GameObject ChildDeathPrefab;
 
     private bool isSantaPresent = false;
 
@@ -37,14 +36,10 @@ public class Basic_Child : MonoBehaviour
     {
         ChildHealth = 15;
         AttackTimer = AttackInterval;
-        
-
     }
 
     void Start()
     {
-        
-
         // SpriteRenderer 컴포넌트 가져오기
         spriteRenderer = GetComponent<SpriteRenderer>();
         // 원래 색상 저장
@@ -105,7 +100,7 @@ public class Basic_Child : MonoBehaviour
         AttackTimer -= Time.deltaTime;
         if (collision.tag == "Santa")
         {
-            MovementSpeed -= 0.1f;
+            MovementSpeed -= 0.4f;
             Santa santa = collision.GetComponent<Santa>();
             isSantaPresent = true;
             if (AttackTimer <= 0f)
@@ -116,8 +111,6 @@ public class Basic_Child : MonoBehaviour
             }
             
         }
-
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)

@@ -22,7 +22,7 @@ public class BasicChild_Spawner : MonoBehaviour
 
     public float BossTimer = 70f;
 
-    public int PoolSize = 20;
+    public int PoolSize = 30;
     public List<Basic_Child> ChildPool;
     public List<BoomChild_Child> BoomChildPool;
 
