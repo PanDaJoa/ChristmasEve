@@ -59,7 +59,7 @@ public class ObjectCard : MonoBehaviour
 
                 // 유닛을 소환하고
                 Instantiate(Object_Plant_Drag);
-                coinManager.Coin -= GetCost(storeType);
+                coinManager.Coin -= cost;
 
                 CardManager.Instance.BuildMode = true;
 
@@ -89,17 +89,17 @@ public class ObjectCard : MonoBehaviour
         switch (type)
         {
             case StoreType.Resource:
-                return 50; // 예시: 리소스 유형의 코인 소모량은 10
+                return 50; 
             case StoreType.Bow:
-                return 100; // 예시: 활 유형의 코인 소모량은 20
+                return 100; 
             case StoreType.Gun:
-                return 200; // 예시: 총 유형의 코인 소모량은 30
+                return 200; 
             case StoreType.Sword:
-                return 250; // 예시: 검 유형의 코인 소모량은 40
+                return 250; 
             case StoreType.PresentBomb:
-                return 600; // 예시: 선물 폭탄 유형의 코인 소모량은 50
+                return 600; 
             default:
-                return 0; // 기본값은 0으로 설정
+                return 0; 
         }
     }
 }
