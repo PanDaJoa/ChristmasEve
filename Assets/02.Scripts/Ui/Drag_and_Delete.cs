@@ -6,12 +6,12 @@ public class Drag_and_Delete : MonoBehaviour
 {
     private bool isDragging = false;
 
-    void OnMouseDrag()
+   public void OnClickCard()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        curPosition.z = 0;
-        transform.position = curPosition;
+        // 1. 마우스를 따라댕기다가
+        Vector2 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        this.transform.position = mousePosition;
     }
 
     void OnTriggerStay2D(Collider2D otherCollider)
