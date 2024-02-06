@@ -19,7 +19,13 @@ public class Bomb : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision == null)
+        {
+            return;
+        }
+
         CurrentTime -= Time.deltaTime;
+
         if (collision.tag == "Child")
         {
             Debug.Log("폭파준비");
@@ -27,10 +33,18 @@ public class Bomb : MonoBehaviour
             {
                 Debug.Log("타이머 준비 끝");
                 Basic_Child child = collision.GetComponent<Basic_Child>();
-                child.ChildHealth -= 30;
+                if (child != null)
+                {
+                    child.ChildHealth -= 30;
+                }
+
+                BoomChild_Child boomchild = collision.GetComponent<BoomChild_Child>();
+                if (boomchild != null)
+                {
+                    boomchild.ChildHealth -= 30;
+                }
                 CurrentTime = Timer;
             }
-            
         }
     }
 
