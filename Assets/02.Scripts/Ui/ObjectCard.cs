@@ -6,8 +6,11 @@ using UnityEngine;
 
 public enum Store
 {
-
-
+    Resource,                //자원 50
+    Bow,                        //화살 100
+    Gun,                        //총 200
+    Sword,                    //검 250
+    PresentBomb ,       //선물폭탄  600
 }
 
 public class ObjectCard : MonoBehaviour
@@ -20,14 +23,10 @@ public class ObjectCard : MonoBehaviour
    
     private bool isOnCooldown = false; // 쿨타임 상태를 저장하는 플래그
 
-
     // 카드를 클릭하면
-
     // 드래그 유닛 이미지 바꾸는 코드
     /*  public Sprite mySprite;
         public Container[] containers;*/
-
-
     // 카드를 클릭하면
     public void OnClickCard()
     {
@@ -39,7 +38,6 @@ public class ObjectCard : MonoBehaviour
         // 쿨타임이 아니면
         if (!isOnCooldown)
         {
-
             Debug.Log("유닛소환");
 
             // 유닛을 소환하고
@@ -51,10 +49,7 @@ public class ObjectCard : MonoBehaviour
             lastSummonTime = Time.deltaTime;
 
             StartCoroutine(Cooldown()); // 쿨타임 코루틴을 시작            
-
-
         }
-
     }
 
     IEnumerator Cooldown()
