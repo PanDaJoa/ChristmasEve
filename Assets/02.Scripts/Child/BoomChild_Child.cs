@@ -69,9 +69,11 @@ public class BoomChild_Child : MonoBehaviour
 
     private void Death()
     {
+        
+        GameObject BoomPrefab = Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
+
         gameObject.SetActive(false);
-        Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
-        gameObject.SetActive(false);
+
     }
 
 }
