@@ -26,13 +26,20 @@ public class Santa : MonoBehaviour
     public GameObject SantaDeathPrefab;
     public GameObject ContainerPrefab;
 
-    
+    // 원래 색상을 저장할 변수
+    private Color originalColor;
+
+    // SpriteRenderer 컴포넌트를 저장할 변수
+    private SpriteRenderer spriteRenderer;
 
 
 
     void Start()
     {
-
+        // SpriteRenderer 컴포넌트 가져오기
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        // 원래 색상 저장
+        originalColor = spriteRenderer.color;
     }
     void Update()
     {
@@ -60,47 +67,22 @@ public class Santa : MonoBehaviour
                         AttackTimer = AttackInterval;
                         child.ChildHealth -= AttackDamage;
                         Debug.Log($"어린이체력:{child.ChildHealth}");
-                    }
-                
+
+                        // 피격 시 색상 변경
+                        StartCoroutine(FlashRed());
             }
+        
+        }
        
     }
-
-}
-
-
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class BoomSanta : MonoBehaviour
-{
-    public GameObject BombPrefab;
-
-
-    void Start()
+    IEnumerator FlashRed()
     {
-        Santa santa = GetComponent<Santa>();
-    }
-    void Update()
-    {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Basic_Child child = collision.GetComponent<Basic_Child>();
-        if (collision.tag == "Child")
-        {
-            if ()
-                Explosion();
-        }
-    }
-
-    void Explosion()
-    {
-        gameObject.SetActive(false);
-        Instantiate(BombPrefab, transform.position, transform.rotation);
-        gameObject.SetActive(false);
+        // 붉은색으로 변경
+        spriteRenderer.color = Color.red;
+        // 0.2초 대기
+        yield return new WaitForSeconds(0.2f);
+        // 원래 색상으로 복원
+        spriteRenderer.color = originalColor;
     }
 }
-*/
+

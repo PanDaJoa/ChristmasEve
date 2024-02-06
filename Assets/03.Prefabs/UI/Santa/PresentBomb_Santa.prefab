@@ -180,8 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storeType: 0
   Object_Plant_Drag: {fileID: 3326803857264730866}
   cooldown: 3
+  coinManager: {fileID: 0}
 --- !u!114 &6447442510883783368
 MonoBehaviour:
   m_ObjectHideFlags: 0
