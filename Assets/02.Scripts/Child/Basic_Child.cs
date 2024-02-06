@@ -22,7 +22,7 @@ public class Basic_Child : MonoBehaviour
     public float MovementSpeed = 0.4f;
     public float OriginalSpeed = 0.4f;
 
-    public const float AttackInterval = 0.4f;
+    public float AttackInterval = 1f;
     public float AttackTimer = 0;
 
     public bool AttackAutoMode = false;
@@ -75,6 +75,7 @@ public class Basic_Child : MonoBehaviour
         {
             AttackDamage = 2;
         }
+        AttackInterval = Mathf.Max(0.5f, AttackInterval);
 
     }
 
