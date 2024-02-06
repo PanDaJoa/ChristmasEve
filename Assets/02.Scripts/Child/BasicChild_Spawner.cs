@@ -13,14 +13,14 @@ public class BasicChild_Spawner : MonoBehaviour
 
     public GameObject Boom_ChildPrefab;
 
-    public float MinSpawnInterval = 5f;
-    public float MaxSpawnInterval = 9f;
+    public float MinSpawnInterval = 6f;
+    public float MaxSpawnInterval = 14f;
     public float SpawnTimer = 0f;
     public float SpawnInterval = 0f;
 
-    public float GameEndTimer = 30f;
+    public float GameEndTimer = 90f;
 
-    public float BossTimer = 10f;
+    public float BossTimer = 70f;
 
     public int PoolSize = 20;
     public List<Basic_Child> ChildPool;
@@ -91,7 +91,7 @@ public class BasicChild_Spawner : MonoBehaviour
     }
     private void SpawnChild()
     {
-        int randomNumber = Random.Range(0, 4);
+        int randomNumber = Random.Range(0, 7);
         Basic_Child child = null;
         BoomChild_Child boomchild = null;
 
@@ -101,14 +101,25 @@ public class BasicChild_Spawner : MonoBehaviour
                 child = GetInactiveChildOfType(ChildType.Basic);
                 break;
             case 1:
-                child = GetInactiveChildOfType(ChildType.Sword);
+                child = GetInactiveChildOfType(ChildType.Basic);
                 break;
             case 2:
+                child = GetInactiveChildOfType(ChildType.Basic);
+                break;
+
+            case 3:
+                child = GetInactiveChildOfType(ChildType.Sword);
+                break;
+            case 4:
+                child = GetInactiveChildOfType(ChildType.Sword);
+                break;
+            case 5:
                 child = GetInactiveChildOfType(ChildType.Hammer);
                 break;
-            case 3:
+            case 6:
                 boomchild = GetInactiveBoomChildOfType(BoomChildType.Boom);
                 break;
+
         }
 
         if (child != null)
