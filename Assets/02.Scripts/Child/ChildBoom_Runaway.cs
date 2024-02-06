@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Child_Runaway : MonoBehaviour
+public class ChildBoom_Runaway : MonoBehaviour
 {
     public float MovementSpeed = 0.8f;
     void Start()
