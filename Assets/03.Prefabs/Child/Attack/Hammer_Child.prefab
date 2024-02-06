@@ -126,10 +126,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChildDeathPrefab: {fileID: 200433486504609011, guid: 6948d0bf85c150f4d92b8f21d90cce08, type: 3}
   CType: 0
-  ChildHealth: 20
+  ChildHealth: 26
   AttackDamage: 1
   MovementSpeed: 0.5
   OriginalSpeed: 0.5
+  AttackInterval: 1
   AttackTimer: 0
   AttackAutoMode: 0
 --- !u!61 &8607949925976853314
