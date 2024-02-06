@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BasicChild_Spawner : MonoBehaviour
 {
@@ -156,6 +157,7 @@ public class BasicChild_Spawner : MonoBehaviour
     {
         // BasicChild_Spawner를 비활성화 또는 파괴하는 코드를 추가합니다.
         gameObject.SetActive(false); // 비활성화
+        SceneManager.LoadScene("GameClear");
     }
 
     }
