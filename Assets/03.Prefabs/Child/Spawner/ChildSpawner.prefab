@@ -48,12 +48,12 @@ MonoBehaviour:
   Sword_ChildPrefab: {fileID: 3822494720086553468, guid: 189b6817e3e70304aa7e503d7408b19b, type: 3}
   Hammer_ChildPrefab: {fileID: 2227551948559779527, guid: beab2ee116c917a4d8386765090fb9ba, type: 3}
   Boom_ChildPrefab: {fileID: 6186770431689370585, guid: c1582b624e4bc294fb0674e2d22aff78, type: 3}
-  MinSpawnInterval: 5
-  MaxSpawnInterval: 9
+  MinSpawnInterval: 13
+  MaxSpawnInterval: 15
   SpawnTimer: 0
   SpawnInterval: 0
-  GameEndTimer: 30
-  BossTimer: 10
+  GameEndTimer: 150
+  BossTimer: 70
   PoolSize: 20
   ChildPool: []
   BoomChildPool: []
