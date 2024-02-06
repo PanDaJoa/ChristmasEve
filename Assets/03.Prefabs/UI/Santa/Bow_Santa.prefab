@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 5629671498177403565}
   - component: {fileID: 5104915724079116471}
   - component: {fileID: 2018674471076241571}
-  - component: {fileID: 7607915674749903986}
   - component: {fileID: 7544693450299126837}
   m_Layer: 6
   m_Name: Bow_Santa
@@ -148,7 +147,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.87, y: 0.96, z: 0}
-  m_LocalScale: {x: -0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1881606323705953169}
@@ -305,21 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _batched: 0
-  ContainerImage: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
---- !u!114 &7607915674749903986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6024919383103064022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Object_Plant_Drag: {fileID: 6024919383103064022}
-  cooldown: 3
+  ContainerImage: {fileID: 21300000, guid: 6ac8c33928ff01648a5e7543881c3973, type: 3}
 --- !u!114 &7544693450299126837
 MonoBehaviour:
   m_ObjectHideFlags: 0
