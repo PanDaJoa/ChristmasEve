@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7937066602534081390}
   - component: {fileID: 8677950688033256052}
   m_Layer: 11
-  m_Name: Square
+  m_Name: Container
   m_TagString: Container
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

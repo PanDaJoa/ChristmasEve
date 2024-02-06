@@ -24,10 +24,12 @@ public class SantaFire : MonoBehaviour
     private ObjectDragDown objectDragDown;
 
 
+
+
     private void Awake()
     {
         _arrowPool = new List<Attack>();
-        for(int i = 0; i < PoolSize; i++)
+        for (int i = 0; i < PoolSize; i++)
         {
             GameObject arrow = Instantiate(ArrowPrefab);
             _arrowPool.Add(arrow.GetComponent<Attack>());
@@ -41,13 +43,17 @@ public class SantaFire : MonoBehaviour
         // ObjectDragDown 컴포넌트를 가져와서 objectDragDown 변수에 저장
         objectDragDown = GetComponent<ObjectDragDown>();
         Timer = 0f;
-        
+
     }
 
     void Update()
     {
         Timer -= Time.deltaTime;
 
+        if (objectDragDown == null)
+        {
+            return;
+        }
         // 드래그 중이 아닐 때만 AutoMode 활성화
         // 즉, AutoMode는 true이고, 동시에 드래그 중이 아닐 때만 ready가 true가 됨
         bool ready = AutoMode && !objectDragDown.IsDragging();
@@ -63,18 +69,44 @@ public class SantaFire : MonoBehaviour
 
     private void Fire()
     {
+
         Attack arrow = null;
-        foreach(Attack a in _arrowPool)
+
+        foreach (Attack a in _arrowPool)
         {
-            if(a.gameObject.activeInHierarchy == false && arrow)
-            { 
+            if (!a.gameObject.activeInHierarchy)
+            {
                 arrow = a;
-                break; 
+                break;
             }
         }
-            
-            GameObject Arrow = Instantiate(ArrowPrefab);
-            Arrow.transform.position = Bow.transform.position;
+
+        if (arrow != null)
+        {
+            arrow.transform.position = Bow.transform.position;
+            arrow.gameObject.SetActive(true);
         }
+        else
+        {
+            // 만약 풀에서 사용 가능한 화살이 없다면 새로운 화살을 생성하고 사용할 수 있도록 설정
+            GameObject newArrow = Instantiate(ArrowPrefab);
+            newArrow.transform.position = Bow.transform.position;
+            _arrowPool.Add(newArrow.GetComponent<Attack>());
+        }
+
+        /* Attack arrow = null;
+         foreach(Attack a in _arrowPool)
+         {
+             if(a.gameObject.activeInHierarchy == false && arrow)
+             { 
+                 arrow = a;
+                 break; 
+             }
+         }
+
+             GameObject Arrow = Instantiate(ArrowPrefab);
+             Arrow.transform.position = Bow.transform.position;
+         }*/
     }
+}
 
