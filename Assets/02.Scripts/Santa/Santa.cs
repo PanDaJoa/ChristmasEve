@@ -45,14 +45,26 @@ public class Santa : MonoBehaviour
     {
         if (SantaHealth <= 0)           //»êÅ¸Á×À½
         {
-            gameObject.SetActive(false);
-            Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
-            Instantiate(ContainerPrefab, transform.position, transform.rotation);
+            Kill();
         }
         if (SType == SantaType.Sword)
         {
             AttackDamage = 3;
         }
+    }
+
+    public void Kill()
+    {
+        gameObject.SetActive(false);
+        Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
+        Instantiate(ContainerPrefab, transform.position, transform.rotation);
+    }
+
+    public void Kill2()
+    {
+        gameObject.SetActive(false);
+        //Instantiate(SantaDeathPrefab, transform.position, transform.rotation);
+        Instantiate(ContainerPrefab, transform.position, transform.rotation);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

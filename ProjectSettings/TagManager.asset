@@ -77,3 +77,6 @@ TagManager:
   - name: Card
     uniqueID: 3653325331
     locked: 0
+  - name: store
+    uniqueID: 126624491
+    locked: 0

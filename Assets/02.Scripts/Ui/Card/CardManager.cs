@@ -10,10 +10,12 @@ public class CardManager : MonoBehaviour
 
     public static CardManager Instance { get; private set; }
     
+
     // 유닛이 드래그 중인지 아닌지를 확인하는 속성
     public bool IsDragging { get; private set; }
 
     public bool BuildMode = false;
+ 
 
     private void Awake()
     {
