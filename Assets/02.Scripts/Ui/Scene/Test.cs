@@ -41,7 +41,7 @@ public class Test : MonoBehaviour
             }
             else if(isScene3Active)
             {
-                SceneManager.LoadScene("SYScene");
+                SceneManager.LoadScene("ChristMasEve");
             }
         }
     }
