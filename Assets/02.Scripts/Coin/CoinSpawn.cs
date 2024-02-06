@@ -28,7 +28,7 @@ public class CoinSpawn : MonoBehaviour
         void Update()
         {
             CurrentTime += Time.deltaTime;
-            if (CurrentTime >= 6f)
+            if (CurrentTime >= 4f)
             {
                 GameObject Coin = Instantiate(CoinPrefab);
                 Coin.SetActive(true);
