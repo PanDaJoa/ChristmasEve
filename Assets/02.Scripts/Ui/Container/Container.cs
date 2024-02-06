@@ -9,7 +9,7 @@ public class Container : MonoBehaviour
     private ObjectDragDown _dragDown;
 
     // 오브젝트가 이미 생성되었는지를 나타내는 플래그 (처음에는 생성이 되어있지 않아서 false)
-    private bool _full = false;
+    public bool _full = false;
 
     // 오브젝트 스프라이트 렌더러를 가져옴
     public SpriteRenderer _spriteRenderer;
