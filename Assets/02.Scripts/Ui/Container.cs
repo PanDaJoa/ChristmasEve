@@ -14,7 +14,7 @@ public class Container : MonoBehaviour
     // 오브젝트 스프라이트 렌더러를 가져옴
     public SpriteRenderer _spriteRenderer;
 
- 
+
 
     // 다른 오브젝트의 콜라이더가 이 오브젝트의 콜라이더와 충돌한 경우 호출되는 함수
     private void OnTriggerEnter2D(Collider2D other)
