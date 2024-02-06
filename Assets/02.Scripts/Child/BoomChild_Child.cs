@@ -20,13 +20,24 @@ public class BoomChild_Child : MonoBehaviour
     public int ChildHealth = 5;
 
     public float MovementSpeed = 0.4f;
+
+    // 원래 색상을 저장할 변수
+    private Color originalColor;
+
+    // SpriteRenderer 컴포넌트를 저장할 변수
+    private SpriteRenderer spriteRenderer;
+
+
     public void Init()
     {
         ChildHealth = 5;
     }
     void Start()
     {
-        
+        // SpriteRenderer 컴포넌트 가져오기
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        // 원래 색상 저장
+        originalColor = spriteRenderer.color;
     }
 
     // Update is called once per frame
@@ -55,12 +66,12 @@ public class BoomChild_Child : MonoBehaviour
             {
                 ChildHealth -= 2;
             }
-         
             arrow.gameObject.SetActive(false);
+            // 피격 시 색상 변경
+            StartCoroutine(FlashRed());
         }
         else if(collision.tag == "Santa")
         {
-            gameObject.SetActive(false);
             Instantiate(ChildRunawayPrefab, transform.position, transform.rotation);
             Instantiate(BoomPrefab, transform.position, transform.rotation);
             gameObject.SetActive(false);
@@ -69,11 +80,18 @@ public class BoomChild_Child : MonoBehaviour
 
     private void Death()
     {
-        
         GameObject BoomPrefab = Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
-
         gameObject.SetActive(false);
 
     }
 
+    IEnumerator FlashRed()
+    {
+        // 붉은색으로 변경
+        spriteRenderer.color = Color.red;
+        // 0.2초 대기
+        yield return new WaitForSeconds(0.2f);
+        // 원래 색상으로 복원
+        spriteRenderer.color = originalColor;
+    }
 }

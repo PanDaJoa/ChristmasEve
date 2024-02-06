@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BasicChild_Spawner : MonoBehaviour
 {
@@ -12,14 +13,14 @@ public class BasicChild_Spawner : MonoBehaviour
 
     public GameObject Boom_ChildPrefab;
 
-    public float MinSpawnInterval = 5f;
-    public float MaxSpawnInterval = 9f;
+    public float MinSpawnInterval = 6f;
+    public float MaxSpawnInterval = 14f;
     public float SpawnTimer = 0f;
     public float SpawnInterval = 0f;
 
-    public float GameEndTimer = 30f;
+    public float GameEndTimer = 90f;
 
-    public float BossTimer = 10f;
+    public float BossTimer = 70f;
 
     public int PoolSize = 20;
     public List<Basic_Child> ChildPool;
@@ -90,7 +91,7 @@ public class BasicChild_Spawner : MonoBehaviour
     }
     private void SpawnChild()
     {
-        int randomNumber = Random.Range(0, 4);
+        int randomNumber = Random.Range(0, 7);
         Basic_Child child = null;
         BoomChild_Child boomchild = null;
 
@@ -100,14 +101,25 @@ public class BasicChild_Spawner : MonoBehaviour
                 child = GetInactiveChildOfType(ChildType.Basic);
                 break;
             case 1:
-                child = GetInactiveChildOfType(ChildType.Sword);
+                child = GetInactiveChildOfType(ChildType.Basic);
                 break;
             case 2:
+                child = GetInactiveChildOfType(ChildType.Basic);
+                break;
+
+            case 3:
+                child = GetInactiveChildOfType(ChildType.Sword);
+                break;
+            case 4:
+                child = GetInactiveChildOfType(ChildType.Sword);
+                break;
+            case 5:
                 child = GetInactiveChildOfType(ChildType.Hammer);
                 break;
-            case 3:
+            case 6:
                 boomchild = GetInactiveBoomChildOfType(BoomChildType.Boom);
                 break;
+
         }
 
         if (child != null)
@@ -150,12 +162,19 @@ public class BasicChild_Spawner : MonoBehaviour
     private void BossTime()
     {
         SpawnInterval = 1;
-        
+        foreach (Basic_Child child in ChildPool)
+        {
+            child.MovementSpeed = 1.5f; // MovementSpeed를 1.5로 변경
+            child.OriginalSpeed = 1.5f; // OriginalSpeed를 1.5로 변경
+            child.AttackInterval = 0.5f; // AttackInterval을 0.5로 변경
+        }
+
     }
     private void DestroyOrDisableSpawner()
     {
         // BasicChild_Spawner를 비활성화 또는 파괴하는 코드를 추가합니다.
         gameObject.SetActive(false); // 비활성화
+        SceneManager.LoadScene("GameClear");
     }
 
     }

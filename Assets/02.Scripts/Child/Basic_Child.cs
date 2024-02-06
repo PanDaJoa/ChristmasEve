@@ -22,26 +22,33 @@ public class Basic_Child : MonoBehaviour
     public float MovementSpeed = 0.4f;
     public float OriginalSpeed = 0.4f;
 
-    public const float AttackInterval = 0.4f;
+    public float AttackInterval = 1f;
     public float AttackTimer = 0;
 
     public bool AttackAutoMode = false;
+
+    // 원래 색상을 저장할 변수
+    private Color originalColor;
+
+    // SpriteRenderer 컴포넌트를 저장할 변수
+    private SpriteRenderer spriteRenderer;
+
     public void Init()
     {
-
         ChildHealth = 15;
         AttackTimer = AttackInterval;
+        
+
     }
-
-
-   
-
-
 
     void Start()
     {
-       
+        
 
+        // SpriteRenderer 컴포넌트 가져오기
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        // 원래 색상 저장
+        originalColor = spriteRenderer.color;
     }
 
     void Update()
@@ -68,19 +75,13 @@ public class Basic_Child : MonoBehaviour
         {
             AttackDamage = 2;
         }
+        AttackInterval = Mathf.Max(0.5f, AttackInterval);
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.tag == "Santa")
-        {
-            Santa santa = collision.GetComponent<Santa>();
-            MovementSpeed = 0;
-            santa.SantaHealth -= AttackDamage;
-            isSantaPresent = true;
-            Debug.Log($"트리거 엔터{santa.SantaHealth}");
-        }*/
+
         if (collision.tag == "Arrow")
         {
             Attack arrow = collision.GetComponent<Attack>();
@@ -93,6 +94,9 @@ public class Basic_Child : MonoBehaviour
                 ChildHealth -= 2;
             }
             arrow.gameObject.SetActive(false);
+
+            // 피격 시 색상 변경
+            StartCoroutine(FlashRed());
         }
     }
 
@@ -126,11 +130,20 @@ public class Basic_Child : MonoBehaviour
 
     private void Death()
     {
-        
+        spriteRenderer.color = originalColor;
         Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
         gameObject.SetActive(false);
-        
+    }
+    // 붉은색으로 깜빡이는 Coroutine
+
+    IEnumerator FlashRed()
+    {
+        // 붉은색으로 변경
+        spriteRenderer.color = Color.red;
+        // 0.2초 대기
+        yield return new WaitForSeconds(0.2f);
+        // 원래 색상으로 복원
+        spriteRenderer.color = originalColor;
     }
 
-    
 }
