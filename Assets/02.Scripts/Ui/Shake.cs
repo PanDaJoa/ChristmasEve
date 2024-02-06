@@ -9,11 +9,11 @@ public class CameraShake : MonoBehaviour
     public Transform camTransform;
 
     // 오브젝트가 얼마 동안 흔들릴지 결정합니다.
-    public float shakeDuration = 0f;
+    public float shakeDuration = 0.6f;
 
     // 쉐이크의 진폭. 값이 클수록 카메라를 더 강하게 흔듭니다.
-    public float shakeAmount = 0.7f;
-    public float decreaseFactor = 1.0f;
+    public float shakeAmount = 0.5f;
+    public float decreaseFactor = 0.6f;
 
     Vector3 originalPos;  // 원래 위치를 저장하기 위한 변수
 
