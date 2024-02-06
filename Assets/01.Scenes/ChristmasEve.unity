@@ -215,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5878616107311421425, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8347272474924097497, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: BossTimer
@@ -1679,7 +1679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5878616107311421425, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8347272474924097497, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: BossTimer
@@ -3236,7 +3236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5878616107311421425, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8347272474924097497, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: BossTimer
@@ -4595,7 +4595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5878616107311421425, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8347272474924097497, guid: 4f18dd849ae9c8147a71f8432ef38f01, type: 3}
       propertyPath: BossTimer
