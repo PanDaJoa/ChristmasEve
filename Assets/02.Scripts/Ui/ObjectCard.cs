@@ -4,14 +4,20 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public enum Store
+public enum StoreType
 {
-
+    Resource,
+    Bow,
+    Gun,
+    Sword,
+    PresentBomb
 
 }
 
 public class ObjectCard : MonoBehaviour
 {
+    public StoreType storeType;
+
     public GameObject Object_Plant_Drag;
 
     public float cooldown = 3f; // 쿨타임을 3초로 설정
@@ -20,6 +26,8 @@ public class ObjectCard : MonoBehaviour
    
     private bool isOnCooldown = false; // 쿨타임 상태를 저장하는 플래그
 
+    public CoinManager coinManager; // CoinManager 클래스를 참조할 변수 추가
+
 
     // 카드를 클릭하면
 
@@ -27,6 +35,11 @@ public class ObjectCard : MonoBehaviour
     /*  public Sprite mySprite;
         public Container[] containers;*/
 
+
+    private void Start()
+    {
+        coinManager = CoinManager.instance;
+    }
 
     // 카드를 클릭하면
     public void OnClickCard()
