@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7961467952869220244}
   - component: {fileID: 3974111516589432731}
   - component: {fileID: 6082506551220065245}
+  - component: {fileID: -6008522738614103751}
   m_Layer: 0
   m_Name: GameOverZone
   m_TagString: Untagged
@@ -171,3 +172,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6008522738614103751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771223834229308932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691f8def6deff414488b88d75da6c4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
