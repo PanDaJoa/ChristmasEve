@@ -50,21 +50,28 @@ public class ObjectCard : MonoBehaviour
         }
 
         // 쿨타임이 아니면
-        if (!isOnCooldown && coinManager.Coin >= GetCost(storeType))
+        if (!isOnCooldown)
         {
+            int cost = GetCost(storeType);
+            if (coinManager.Coin >= cost)
+            {
+                Debug.Log("유닛소환");
 
-            Debug.Log("유닛소환");
+                // 유닛을 소환하고
+                Instantiate(Object_Plant_Drag);
+                coinManager.Coin -= GetCost(storeType);
 
-            // 유닛을 소환하고
-            Instantiate(Object_Plant_Drag);
-            coinManager.Coin -= GetCost(storeType);
+                CardManager.Instance.BuildMode = true;
 
-            CardManager.Instance.BuildMode = true;
+                // 마지막 소환 시간을 현재 시간으로 업데이트
+                lastSummonTime = Time.deltaTime;
 
-            // 마지막 소환 시간을 현재 시간으로 업데이트
-            lastSummonTime = Time.deltaTime;
-
-            StartCoroutine(Cooldown()); // 쿨타임 코루틴을 시작            
+                StartCoroutine(Cooldown()); // 쿨타임 코루틴을 시작      
+            }
+            else
+            {
+                Debug.Log("코인이 부족합니다.");
+            }
 
 
         }
@@ -96,6 +103,6 @@ public class ObjectCard : MonoBehaviour
         }
     }
 }
-}
+
 
 
