@@ -19,7 +19,7 @@ public class ChildBoom : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(" 실행되냐?");
+        //Debug.Log(" 실행되냐?");
         CurrentTime -= Time.deltaTime;
         if (collision.tag == "Santa")
         {
