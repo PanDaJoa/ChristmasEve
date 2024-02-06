@@ -52,8 +52,8 @@ MonoBehaviour:
   MaxSpawnInterval: 15
   SpawnTimer: 0
   SpawnInterval: 0
-  GameEndTimer: 150
-  BossTimer: 70
+  GameEndTimer: 180
+  BossTimer: 60
   PoolSize: 20
   ChildPool: []
   BoomChildPool: []

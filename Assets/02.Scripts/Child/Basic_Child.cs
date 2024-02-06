@@ -80,7 +80,7 @@ public class Basic_Child : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+
         if (collision.tag == "Arrow")
         {
             Attack arrow = collision.GetComponent<Attack>();
@@ -133,8 +133,8 @@ public class Basic_Child : MonoBehaviour
         Instantiate(ChildDeathPrefab, transform.position, transform.rotation);
         gameObject.SetActive(false);
     }
-
     // ºÓÀº»öÀ¸·Î ±ôºýÀÌ´Â Coroutine
+
     IEnumerator FlashRed()
     {
         // ºÓÀº»öÀ¸·Î º¯°æ

@@ -128,8 +128,8 @@ MonoBehaviour:
   CType: 0
   ChildHealth: 20
   AttackDamage: 1
-  MovementSpeed: 0.4
-  OriginalSpeed: 0.4
+  MovementSpeed: 0.5
+  OriginalSpeed: 0.5
   AttackTimer: 0
   AttackAutoMode: 0
 --- !u!61 &8607949925976853314
