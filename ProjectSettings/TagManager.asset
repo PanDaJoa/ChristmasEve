@@ -50,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: GameOverZone
+    uniqueID: 284063333
+    locked: 0
   - name: Background
     uniqueID: 2104510909
     locked: 0

@@ -25,7 +25,6 @@ public class CoinSpawn : MonoBehaviour
         {
 
         }
-
         void Update()
         {
             CurrentTime += Time.deltaTime;
