@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 3517057385058926436}
   - component: {fileID: -5611206597286121224}
   - component: {fileID: -7457382404298030043}
-  - component: {fileID: 7110975511582071243}
   - component: {fileID: -6603036011693984634}
   - component: {fileID: 5565793848243205563}
   - component: {fileID: 7618580771702580814}
@@ -214,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _batched: 0
+  unitSprite: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
 --- !u!114 &-7457382404298030043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,19 +228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object_Plant_Drag: {fileID: 5520118419715251550}
   cooldown: 3
---- !u!114 &7110975511582071243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5520118419715251550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff008773ec6511a488e6bfc6b1c3cc79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 2f2ab5ea733a13847bd33ba7eb6acc0c, type: 3}
 --- !u!114 &-6603036011693984634
 MonoBehaviour:
   m_ObjectHideFlags: 0
