@@ -14,6 +14,10 @@ public class Coin : MonoBehaviour
     void Start()
     {
         _target = GameObject.Find("Wallet");
+        // scene에 있는 사운드소스가 있는 오브젝트
+        GameObject SoundController = GameObject.Find("SoundController_Coin");
+        // 그 오브젝트에서 audiosource component를 가져오기
+        CoinSound = SoundController.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -43,15 +47,18 @@ public class Coin : MonoBehaviour
     {
         if(collision.collider.tag == "Wallet")
         {
-            CoinSound.Play();
+           
             Collect();
+
         }
     }
 
     // Coin이 Wallet에 닿았을 때 호출될 메서드
     private void Collect()
     {
+       
         CoinManager.instance.Coin += 50; // 점수를 50 증가시킴
+        CoinSound.Play();
         Destroy(gameObject); // 코인 오브젝트 파괴
     }
 
