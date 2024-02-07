@@ -94,4 +94,5 @@ public class BoomChild_Child : MonoBehaviour
         // 원래 색상으로 복원
         spriteRenderer.color = originalColor;
     }
+    
 }

@@ -164,7 +164,7 @@ public class BasicChild_Spawner : MonoBehaviour
         SpawnInterval = 1;
         foreach (Basic_Child child in ChildPool)
         {
-            child.MovementSpeed = 1.5f; // MovementSpeed를 1.5로 변경
+            
             child.OriginalSpeed = 1.5f; // OriginalSpeed를 1.5로 변경
             child.AttackInterval = 0.5f; // AttackInterval을 0.5로 변경
         }
