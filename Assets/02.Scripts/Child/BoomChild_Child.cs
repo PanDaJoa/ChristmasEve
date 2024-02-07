@@ -30,6 +30,7 @@ public class BoomChild_Child : MonoBehaviour
 
     public void Init()
     {
+        
         ChildHealth = 5;
     }
     void Start()

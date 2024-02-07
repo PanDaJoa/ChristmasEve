@@ -32,6 +32,9 @@ public class Basic_Child : MonoBehaviour
     // SpriteRenderer 컴포넌트를 저장할 변수
     private SpriteRenderer spriteRenderer;
 
+    // ChildHealth의 이전 값을 저장할 변수
+    private float previousChildHealth; 
+
     public void Init()
     {
         ChildHealth = 15;
@@ -109,8 +112,13 @@ public class Basic_Child : MonoBehaviour
                 santa.SantaHealth -= AttackDamage;
                 Debug.Log($"산타체력:{santa.SantaHealth}");
             }
-            
+            if (santa.SType == SantaType.Sword && ChildHealth < previousChildHealth)
+            {
+                StartCoroutine(FlashRed());
+            }
         }
+        // ChildHealth 값을 이전 값으로 저장
+        previousChildHealth = ChildHealth;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
