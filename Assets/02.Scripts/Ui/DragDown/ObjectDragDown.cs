@@ -40,13 +40,15 @@ public class ObjectDragDown : MonoBehaviour
             Vector2 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             this.transform.position = mousePosition;
+
+            
         }
         else
         {
             // 배치가 완료되었으므로 'Unit' 레이어로 다시 변경합니다.
             gameObject.layer = LayerMask.NameToLayer("Santa");
         }
-       
+
     }
     void Attack()
     {
