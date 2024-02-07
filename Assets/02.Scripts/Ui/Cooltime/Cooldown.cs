@@ -7,9 +7,11 @@ public class Cooldown : MonoBehaviour
 {
     public Button YourButton; // 쿨타임이 시작될 버튼
     public Image CooldownImage; // 쿨타임을 표시할 이미지
+   
+    
     public float CooldownTime; // 쿨타임의 전체 시간
 
-    private float currentCooldown; // 현재 남은 쿨타임
+    private float currentCoolTime; // 현재 남은 쿨타임
 
 
     public void OnClickCoolTime()
@@ -17,17 +19,17 @@ public class Cooldown : MonoBehaviour
         
 
         // 쿨타임 중 일때 클릭을 해도 다시 3초로 돌아가지 않는코드
-        if (currentCooldown <= 0)
+        if (currentCoolTime <= 0)
         {
             // 버튼에 클릭 이벤트 추가
-            currentCooldown = CooldownTime;
+            currentCoolTime = CooldownTime;
             
         }
-        if (currentCooldown > 0)
+        if (currentCoolTime > 0)
         {
             
-            currentCooldown -= Time.deltaTime; // 쿨타임 감소
-            CooldownImage.fillAmount = currentCooldown / CooldownTime; // 쿨타임 비율에 따라 이미지 Fill Amount 조정
+            currentCoolTime -= Time.deltaTime; // 쿨타임 감소
+            CooldownImage.fillAmount = currentCoolTime / CooldownTime; // 쿨타임 비율에 따라 이미지 Fill Amount 조정
         }
         else
         {
@@ -37,10 +39,10 @@ public class Cooldown : MonoBehaviour
 
     private void Update()
     {
-        if (currentCooldown > 0)
+        if (currentCoolTime > 0)
         {
-            currentCooldown -= Time.deltaTime; // 쿨타임 감소
-            CooldownImage.fillAmount = currentCooldown / CooldownTime; // 쿨타임 비율에 따라 이미지 Fill Amount 조정
+            currentCoolTime -= Time.deltaTime; // 쿨타임 감소
+            CooldownImage.fillAmount = currentCoolTime / CooldownTime; // 쿨타임 비율에 따라 이미지 Fill Amount 조정
         }
         else
         {
