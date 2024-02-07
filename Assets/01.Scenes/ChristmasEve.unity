@@ -5179,6 +5179,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3161327503499808127, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161327503499808127, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1350
       objectReference: {fileID: 0}
@@ -5189,6 +5193,14 @@ PrefabInstance:
     - target: {fileID: 3192212637470395556, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221896934600674387, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221896934600674387, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5759220756473882362, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5244,6 +5256,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7942804504570593752, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942804504570593752, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942804504570593752, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942804504570593752, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7942804504570593752, guid: 4cf8acc3f5fb9de4cac35c53dddd724f, type: 3}

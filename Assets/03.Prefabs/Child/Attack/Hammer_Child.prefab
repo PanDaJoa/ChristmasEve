@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9286198fc572348a79c0e321371e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CType: 2
   ChildDeathPrefab: {fileID: 200433486504609011, guid: 6948d0bf85c150f4d92b8f21d90cce08, type: 3}
-  CType: 0
   ChildHealth: 26
   AttackDamage: 1
   MovementSpeed: 0.5
