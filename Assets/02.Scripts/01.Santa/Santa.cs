@@ -82,6 +82,7 @@ public class Santa : MonoBehaviour
    
                 // 피격 시 색상 변경
                 StartCoroutine(FlashRed());
+                SantaAttackSound.Play();
             }
            
         }
@@ -90,9 +91,10 @@ public class Santa : MonoBehaviour
             // 붉은색으로 변경
             spriteRenderer.color = Color.red;
             // 0.2초 대기
+            
             yield return new WaitForSeconds(0.2f);
             // 원래 색상으로 복원
-            SantaAttackSound.Play();
+            
             spriteRenderer.color = originalColor;
         }
     }
