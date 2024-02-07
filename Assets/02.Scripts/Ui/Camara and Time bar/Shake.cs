@@ -36,6 +36,7 @@ public class CameraShake : MonoBehaviour
     {
         // 3초 후에 ShakeCamera 메서드를 호출합니다.
         StartCoroutine(ShakeCameraAfterDelay(3));
+        StartCoroutine(ShakeCameraAfterDelay(70));
     }
 
     IEnumerator ShakeCameraAfterDelay(float delay)
