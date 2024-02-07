@@ -280,12 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9286198fc572348a79c0e321371e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CType: 1
   ChildDeathPrefab: {fileID: 8179437291377787161, guid: b5dac4a6215767749ba94b2b7fb482ea, type: 3}
-  CType: 0
   ChildHealth: 15
   AttackDamage: 1
   MovementSpeed: 1
   OriginalSpeed: 0.4
+  AttackInterval: 1
   AttackTimer: 0
   AttackAutoMode: 0
 --- !u!1 &5889981731717422670

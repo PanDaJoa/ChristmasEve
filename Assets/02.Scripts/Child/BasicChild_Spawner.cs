@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BasicChild_Spawner : MonoBehaviour
 {
-    bool isGameEnded = false;
+    
 
     public GameObject Basic_ChildPrefab;
     public GameObject Sword_ChildPrefab;
@@ -79,7 +79,7 @@ public class BasicChild_Spawner : MonoBehaviour
         }
         if (GameEndTimer <= 0f && BossTimer <= 0f)
         {
-            isGameEnded = true;
+            
             DestroyOrDisableSpawner();
         }
 
@@ -94,22 +94,16 @@ public class BasicChild_Spawner : MonoBehaviour
         int randomNumber = Random.Range(0, 7);
         Basic_Child child = null;
         BoomChild_Child boomchild = null;
+        Debug.Log($"À¯´Ö·£´ý ¹øÈ£´Â{randomNumber}");
 
         switch (randomNumber)
         {
             case 0:
-                child = GetInactiveChildOfType(ChildType.Basic);
-                break;
             case 1:
-                child = GetInactiveChildOfType(ChildType.Basic);
-                break;
             case 2:
                 child = GetInactiveChildOfType(ChildType.Basic);
                 break;
-
             case 3:
-                child = GetInactiveChildOfType(ChildType.Sword);
-                break;
             case 4:
                 child = GetInactiveChildOfType(ChildType.Sword);
                 break;
