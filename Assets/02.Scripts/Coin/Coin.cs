@@ -7,6 +7,7 @@ public class Coin : MonoBehaviour
 {
     public float Speed = 7f;
     private GameObject _target;
+    public AudioSource CoinSound;
 
     private bool _isFlying = false; // 날아가는 중인지 여부를 나타내는 플래그
 
@@ -36,6 +37,14 @@ public class Coin : MonoBehaviour
         if (!_isFlying) // 날아가는 중이 아닐 때에만 동작
         {
             _isFlying = true; // 날아가는 상태로 변경
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Wallet")
+        {
+            CoinSound.Play();
+            Collect();
         }
     }
 
