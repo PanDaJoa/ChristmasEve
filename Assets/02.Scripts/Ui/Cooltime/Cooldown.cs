@@ -12,18 +12,20 @@ public class Cooldown : MonoBehaviour
     private float currentCooldown; // 현재 남은 쿨타임
 
 
-    
     public void OnClickCoolTime()
     {
+        
+
         // 쿨타임 중 일때 클릭을 해도 다시 3초로 돌아가지 않는코드
         if (currentCooldown <= 0)
         {
             // 버튼에 클릭 이벤트 추가
             currentCooldown = CooldownTime;
-
+            
         }
         if (currentCooldown > 0)
         {
+            
             currentCooldown -= Time.deltaTime; // 쿨타임 감소
             CooldownImage.fillAmount = currentCooldown / CooldownTime; // 쿨타임 비율에 따라 이미지 Fill Amount 조정
         }
