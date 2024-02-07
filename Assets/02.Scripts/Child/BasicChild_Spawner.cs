@@ -94,7 +94,7 @@ public class BasicChild_Spawner : MonoBehaviour
         int randomNumber = Random.Range(0, 7);
         Basic_Child child = null;
         BoomChild_Child boomchild = null;
-        Debug.Log($"유닛랜덤 번호는{randomNumber}");
+        
 
         switch (randomNumber)
         {
@@ -168,7 +168,7 @@ public class BasicChild_Spawner : MonoBehaviour
     {
         // BasicChild_Spawner를 비활성화 또는 파괴하는 코드를 추가합니다.
         gameObject.SetActive(false); // 비활성화
-        SceneManager.LoadScene("GameClear");
+        //SceneManager.LoadScene("GameClear");
     }
 
     }
