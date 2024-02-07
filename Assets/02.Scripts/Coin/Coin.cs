@@ -7,6 +7,7 @@ public class Coin : MonoBehaviour
 {
     public float Speed = 7f;
     private GameObject _target;
+    public AudioSource CoinSound;
 
     private bool _isFlying = false; // 날아가는 중인지 여부를 나타내는 플래그
 
