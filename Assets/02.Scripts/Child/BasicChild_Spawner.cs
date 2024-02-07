@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BasicChild_Spawner : MonoBehaviour
 {
-    bool isGameEnded = false;
+    
 
     public GameObject Basic_ChildPrefab;
     public GameObject Sword_ChildPrefab;
@@ -79,7 +79,7 @@ public class BasicChild_Spawner : MonoBehaviour
         }
         if (GameEndTimer <= 0f && BossTimer <= 0f)
         {
-            isGameEnded = true;
+            
             DestroyOrDisableSpawner();
         }
 
@@ -94,22 +94,16 @@ public class BasicChild_Spawner : MonoBehaviour
         int randomNumber = Random.Range(0, 7);
         Basic_Child child = null;
         BoomChild_Child boomchild = null;
+        Debug.Log($"유닛랜덤 번호는{randomNumber}");
 
         switch (randomNumber)
         {
             case 0:
-                child = GetInactiveChildOfType(ChildType.Basic);
-                break;
             case 1:
-                child = GetInactiveChildOfType(ChildType.Basic);
-                break;
             case 2:
                 child = GetInactiveChildOfType(ChildType.Basic);
                 break;
-
             case 3:
-                child = GetInactiveChildOfType(ChildType.Sword);
-                break;
             case 4:
                 child = GetInactiveChildOfType(ChildType.Sword);
                 break;
@@ -164,7 +158,7 @@ public class BasicChild_Spawner : MonoBehaviour
         SpawnInterval = 1;
         foreach (Basic_Child child in ChildPool)
         {
-            child.MovementSpeed = 1.5f; // MovementSpeed를 1.5로 변경
+            
             child.OriginalSpeed = 1.5f; // OriginalSpeed를 1.5로 변경
             child.AttackInterval = 0.5f; // AttackInterval을 0.5로 변경
         }

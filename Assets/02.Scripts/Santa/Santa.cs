@@ -13,7 +13,7 @@ public enum SantaType
     PresentBomb
 }
 
-public class Santa : MonoBehaviour 
+public class Santa : MonoBehaviour
 {
     public SantaType SType;
     public int SantaHealth = 10;
@@ -21,7 +21,7 @@ public class Santa : MonoBehaviour
     public float AttackTimer = 0f;
 
     public int AttackDamage;
-    
+
 
     public GameObject SantaDeathPrefab;
     public GameObject ContainerPrefab;
@@ -69,32 +69,30 @@ public class Santa : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         AttackTimer -= Time.deltaTime;
-        
-            if (collision.tag == "Child")
-            {
-                Basic_Child child = collision.GetComponent<Basic_Child>();
-                
-                    if (AttackTimer <= 0f)
-                    {
-                        AttackTimer = AttackInterval;
-                        child.ChildHealth -= AttackDamage;
-                        Debug.Log($"어린이체력:{child.ChildHealth}");
 
-                        // 피격 시 색상 변경
-                        StartCoroutine(FlashRed());
+        if (collision.tag == "Child")
+        {
+            Basic_Child child = collision.GetComponent<Basic_Child>();
+
+            if (AttackTimer <= 0f)
+            {
+                AttackTimer = AttackInterval;
+                child.ChildHealth -= AttackDamage;
+                Debug.Log($"어린이체력:{child.ChildHealth}");
+                // 피격 시 색상 변경
+                StartCoroutine(FlashRed());
             }
-        
+
         }
-       
-    }
-    IEnumerator FlashRed()
-    {
-        // 붉은색으로 변경
-        spriteRenderer.color = Color.red;
-        // 0.2초 대기
-        yield return new WaitForSeconds(0.2f);
-        // 원래 색상으로 복원
-        spriteRenderer.color = originalColor;
+        IEnumerator FlashRed()
+        {
+            // 붉은색으로 변경
+            spriteRenderer.color = Color.red;
+            // 0.2초 대기
+            yield return new WaitForSeconds(0.2f);
+            // 원래 색상으로 복원
+            spriteRenderer.color = originalColor;
+        }
     }
 }
 

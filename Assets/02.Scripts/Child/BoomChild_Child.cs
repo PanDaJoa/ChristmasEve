@@ -30,6 +30,7 @@ public class BoomChild_Child : MonoBehaviour
 
     public void Init()
     {
+        
         ChildHealth = 5;
     }
     void Start()
@@ -94,4 +95,5 @@ public class BoomChild_Child : MonoBehaviour
         // 원래 색상으로 복원
         spriteRenderer.color = originalColor;
     }
+    
 }
