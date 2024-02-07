@@ -6,13 +6,22 @@ using UnityEngine.Rendering;
 public class ObjectEraser : MonoBehaviour
 {
     public bool Batched;
-
     public bool IsDragging;
+    public AudioSource DeleteSound;
+    
 
     private Collider2D containerCollider;
 
+    private void Start()
+    {
+        // scene에 있는 사운드소스가 있는 오브젝트
+        GameObject SoundController = GameObject.Find("SoundController_Delete");
+        // 그 오브젝트에서 audiosource component를 가져오기
+        DeleteSound = SoundController.GetComponent<AudioSource>();
+    }
     public void Update()
     {
+        
         if (!Batched)
         {
             // 1. 마우스를 따라댕기다가
@@ -31,8 +40,8 @@ public class ObjectEraser : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             IsDragging = false;
-
             Destroy(gameObject);
+            
         }
     }
     void OnTriggerStay2D(Collider2D otherCollider)
@@ -41,20 +50,20 @@ public class ObjectEraser : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-
                 Batched = true;
-
                 
             }
             Santa santa = otherCollider.GetComponent<Santa>();
             if (santa != null)
             {
-              // Destroy(otherCollider.gameObject);
-               santa.Kill2(); // 산타의 체력을 0으로 만들어 산타를 죽입니다.
+                
+                // Destroy(otherCollider.gameObject);
+                santa.Kill2(); // 산타의 체력을 0으로 만들어 산타를 죽입니다.
                                        // 이렇게 하면 산타가 죽을 때의 코드가 실행되어 SantaDeathPrefab과 ContainerPrefab이 생성됩니다.
             }
-            
+            DeleteSound.Play();
             Destroy(this.gameObject);
+            
         }
     }
 }
