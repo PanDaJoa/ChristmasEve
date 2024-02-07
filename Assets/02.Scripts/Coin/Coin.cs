@@ -39,6 +39,14 @@ public class Coin : MonoBehaviour
             _isFlying = true; // 날아가는 상태로 변경
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Wallet")
+        {
+            CoinSound.Play();
+            Collect();
+        }
+    }
 
     // Coin이 Wallet에 닿았을 때 호출될 메서드
     private void Collect()

@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Batched: 0
   IsDragging: 0
+  DeleteSound: {fileID: 0}
 --- !u!61 &-948179969846415226
 BoxCollider2D:
   m_ObjectHideFlags: 0
