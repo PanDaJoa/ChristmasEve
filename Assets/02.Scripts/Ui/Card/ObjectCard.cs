@@ -28,7 +28,7 @@ public class ObjectCard : MonoBehaviour
 
     public CoinManager coinManager; // CoinManager 클래스를 참조할 변수 추가
 
-
+    public Cooldown cooldownScript;
     // 카드를 클릭하면
 
     // 드래그 유닛 이미지 바꾸는 코드
@@ -39,6 +39,8 @@ public class ObjectCard : MonoBehaviour
     private void Start()
     {
         coinManager = CoinManager.instance;
+
+       
     }
 
     // 카드를 클릭하면
@@ -55,12 +57,14 @@ public class ObjectCard : MonoBehaviour
             int cost = GetCost(storeType);
             if (coinManager.Coin >= cost)
             {
+                
                 Debug.Log("유닛소환");
+                
 
                 // 유닛을 소환하고
                 Instantiate(Object_Plant_Drag);
                 coinManager.Coin -= GetCost(storeType);
-
+                
                 CardManager.Instance.BuildMode = true;
 
                 // 마지막 소환 시간을 현재 시간으로 업데이트

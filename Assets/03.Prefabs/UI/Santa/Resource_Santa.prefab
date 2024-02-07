@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 06100137cfa14f979953f6d365ec91ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -175,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1957304, y: 1.4090725}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &6771987935680190571
 MonoBehaviour:
@@ -202,8 +202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storeType: 0
   Object_Plant_Drag: {fileID: 2296317073256783994}
   cooldown: 3
+  coinManager: {fileID: 0}
+  cooldownScript: {fileID: 0}
 --- !u!114 &4728147570853673202
 MonoBehaviour:
   m_ObjectHideFlags: 0

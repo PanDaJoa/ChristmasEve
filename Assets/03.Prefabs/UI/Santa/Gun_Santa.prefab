@@ -459,7 +459,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.245595, y: 1.5792731}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &4208627724481309343
 MonoBehaviour:
@@ -486,8 +486,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322254888d837724a96e1dec99b74c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storeType: 0
   Object_Plant_Drag: {fileID: 7809361712273890250}
   cooldown: 3
+  coinManager: {fileID: 0}
+  cooldownScript: {fileID: 0}
 --- !u!114 &7954950890716148657
 MonoBehaviour:
   m_ObjectHideFlags: 0
