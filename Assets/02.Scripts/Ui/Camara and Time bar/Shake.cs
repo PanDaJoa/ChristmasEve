@@ -8,12 +8,12 @@ public class CameraShake : MonoBehaviour
     // 카메라의 Transform. 만약 null이면, 이 게임 오브젝트의 Transform을 가져옵니다.
     public Transform camTransform;
 
-    // 오브젝트가 얼마 동안 흔들릴지 결정합니다.
+    // 진동 시간조절
     public float shakeDuration = 0.6f;
 
     // 쉐이크의 진폭. 값이 클수록 카메라를 더 강하게 흔듭니다.
-    public float shakeAmount = 0.5f;
-    public float decreaseFactor = 0.6f;
+    public float shakeAmount = 0.5f; // 카메라 흔들거림 강도조절 
+    public float decreaseFactor = 0.6f; // 진동 시간조절의 초를 0.1로 하면 2초라도 0.1씩 줄어듬
 
     Vector3 originalPos;  // 원래 위치를 저장하기 위한 변수
 
@@ -32,10 +32,10 @@ public class CameraShake : MonoBehaviour
         originalPos = camTransform.localPosition;
     }
 
-    void Start()
+    public void Start()
     {
         // 3초 후에 ShakeCamera 메서드를 호출합니다.
-        StartCoroutine(ShakeCameraAfterDelay(3));
+        StartCoroutine(ShakeCameraAfterDelay(12));
         StartCoroutine(ShakeCameraAfterDelay(70));
     }
 
