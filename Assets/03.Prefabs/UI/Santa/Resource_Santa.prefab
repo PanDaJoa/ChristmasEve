@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 06100137cfa14f979953f6d365ec91ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -206,7 +206,6 @@ MonoBehaviour:
   Object_Plant_Drag: {fileID: 2296317073256783994}
   cooldown: 3
   coinManager: {fileID: 0}
-  cooldownScript: {fileID: 0}
 --- !u!114 &4728147570853673202
 MonoBehaviour:
   m_ObjectHideFlags: 0

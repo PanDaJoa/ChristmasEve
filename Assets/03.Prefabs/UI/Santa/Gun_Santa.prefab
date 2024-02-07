@@ -490,7 +490,6 @@ MonoBehaviour:
   Object_Plant_Drag: {fileID: 7809361712273890250}
   cooldown: 3
   coinManager: {fileID: 0}
-  cooldownScript: {fileID: 0}
 --- !u!114 &7954950890716148657
 MonoBehaviour:
   m_ObjectHideFlags: 0
