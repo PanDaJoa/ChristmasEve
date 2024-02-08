@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8252257226759483779}
   - component: {fileID: 756537112705928423}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3650978508902425950}
   - component: {fileID: 6532150367427719768}
   - component: {fileID: 2486308470874106406}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: GunSanta_Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}

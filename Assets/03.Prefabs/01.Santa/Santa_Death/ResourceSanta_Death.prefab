@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6431977150542505017}
   - component: {fileID: 5931588043093843760}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1448007776978010346}
   - component: {fileID: 7202742995647252900}
   - component: {fileID: 7595732360074361793}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ResourceSanta_Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
