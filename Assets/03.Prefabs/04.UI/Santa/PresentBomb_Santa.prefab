@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 5543993767376503464}
   - component: {fileID: 8124215150099259192}
   - component: {fileID: 6447442510883783368}
-  - component: {fileID: 3628121358856969931}
-  - component: {fileID: 3032316806344429273}
   - component: {fileID: 1904780596543803595}
   m_Layer: 6
   m_Name: PresentBomb_Santa
@@ -141,7 +139,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0044431686, y: -0.3258046}
@@ -200,33 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _batched: 0
   ContainerImage: {fileID: 21300000, guid: 5d57efc0dc2cfd7479cd8ee0769bccde, type: 3}
---- !u!114 &3628121358856969931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3326803857264730866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f56f736854190547a3ddc14cd21cf8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _full: 0
-  _spriteRenderer: {fileID: 0}
---- !u!114 &3032316806344429273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3326803857264730866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f460597af2f92f248802e12b427ddcb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BuildMode: 0
 --- !u!82 &1904780596543803595
 AudioSource:
   m_ObjectHideFlags: 0
