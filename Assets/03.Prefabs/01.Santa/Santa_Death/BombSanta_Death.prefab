@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6431986667691875390}
   - component: {fileID: 3328143552615919243}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5320234902429085413}
   - component: {fileID: 6335306812386831453}
   - component: {fileID: 4391269264666517980}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BombSanta_Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}

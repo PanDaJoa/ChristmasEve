@@ -68,9 +68,9 @@ public class BoomChild_Child : MonoBehaviour
             {
                 ChildHealth -= 2;
             }
-            arrow.gameObject.SetActive(false);
             // 피격 시 색상 변경
             StartCoroutine(FlashRed());
+            arrow.gameObject.SetActive(false);
         }
         else if(collision.tag == "Santa")
         {

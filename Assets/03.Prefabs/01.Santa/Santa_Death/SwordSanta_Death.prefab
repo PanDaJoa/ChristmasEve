@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7916363893062490210}
   - component: {fileID: 5714950925876767109}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8033322581152882940}
   - component: {fileID: 5563747077977490266}
   - component: {fileID: 5027834501136176787}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SwordSanta_Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}

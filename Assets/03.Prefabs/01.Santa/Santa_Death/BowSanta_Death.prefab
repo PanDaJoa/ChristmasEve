@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3288706915971779897}
   - component: {fileID: 7071265473877595131}
-  m_Layer: 6
+  m_Layer: 16
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 6684415004327995015}
   - component: {fileID: 2433125922232509900}
   - component: {fileID: 6768108638164693944}
-  m_Layer: 6
+  m_Layer: 16
   m_Name: BowSanta_Death
-  m_TagString: Santa
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
